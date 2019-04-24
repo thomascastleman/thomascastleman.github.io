@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<script type="text/javascript" language="javascript" src="josephus.js"></script>
+		<script type="text/javascript" language="javascript" src="graphics.js"></script>
+
+		<style>
+			body {
+				padding: 20px; margin: 0px;
+				font-size: 15px;
+				font-family: verdana;
+				background-color: rgb(45, 45, 45);
+				color: white;
+				line-height: 175%;
+			} 
+
+
+			#run {
+				color: white;
+				font-size: 14px;
+				background-color: rgb(70, 70, 70);
+				border: none;
+				margin: 5px;
+				width: 100px;
+				height: 30px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<button id="run">Run</button><br>
+		N: <input id="n" type="text" size="5"><br>
+		Delay (ms): <input id="delay" type="text" size="5"><br>
+
+		Safe Position: 
+		<span id="pos"></span>
+
+	</body>
+</html>

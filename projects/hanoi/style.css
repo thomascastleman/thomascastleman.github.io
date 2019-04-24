@@ -1,0 +1,24 @@
+
+body {
+	color: white;
+	font-family: verdana;
+	font-size: 12px;
+}
+
+div {
+	line-height: 200%;
+}
+
+button {
+	color: white;
+	width: 110px;
+	height: 25px;
+	margin-bottom: 10px;
+
+	background-color: rgb(70, 70, 70);
+	border: none;
+}
+
+input {
+	margin-bottom: 5px;
+}

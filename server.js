@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
 
 var sys = require('./settings.js');
+var routes = require('./routes.js').init(app);
 
 // start server
 var server = app.listen(sys.PORT, function() {

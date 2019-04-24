@@ -1,0 +1,41 @@
+
+body {
+	font-family: 'Share Tech Mono', monospace;
+	background-color: rgb(50, 50, 50);
+	color: rgb(220, 220, 220);
+    line-height: 40px;
+
+    padding: 20px;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 20px;
+}
+
+a:link, a:visited {
+	color: rgb(130, 177, 255);
+	font-weight: bold;
+}
+
+#classifier {
+	float: left;
+	margin-left: 15px;
+	margin-right: 20px;
+	border-color: rgb(200, 200, 200);
+}
+
+.back {
+	font-size: 25px;
+}
+
+.linkback {
+	text-decoration: none;
+}

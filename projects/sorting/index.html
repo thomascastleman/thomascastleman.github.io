@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+
+		<script type="text/javascript" language="javascript" src="radix.js"></script>
+		<script type="text/javascript" language="javascript" src="bogosort.js"></script>
+		<script type="text/javascript" language="javascript" src="quicksort.js"></script>
+		<script type="text/javascript" language="javascript" src="altquicksort.js"></script>
+		<script type="text/javascript" language="javascript" src="insertion.js"></script>
+		<script type="text/javascript" language="javascript" src="cocktail.js"></script>
+		<script type="text/javascript" language="javascript" src="mergesort.js"></script>
+		<script type="text/javascript" language="javascript" src="combsort.js"></script>
+		<script type="text/javascript" language="javascript" src="gravity.js"></script>
+
+		<script type="text/javascript" language="javascript" src="visualizationAndTools.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+		<style> body {padding: 0; margin: 0;} </style>
+		
+	</head>
+
+	<body>
+
+		<div id="inputdiv">
+			Array Size <input id="arrSize" type="text" placeholder="200"><br>
+			Delay (ms) <input id="delay" type="text" placeholder="50"><br>
+		</div>
+
+
+		<div id="container">
+			<button id="radix">Radix Sort</button><br>
+			<button id="quicksort">QuickSort</button><br>
+			<button id="mergesort">Merge Sort</button><br>
+			<button id="insertionsort">Insertion Sort</button><br>
+			<button id="combsort">Comb Sort</button><br>
+			<button id="cocktailsort">Cocktail Shaker Sort</button><br>
+			<button id="gravitysort">Gravity Sort</button><br>
+
+			<br><span id="sortName"></span>
+		</div>
+
+	</body>
+
+</html>

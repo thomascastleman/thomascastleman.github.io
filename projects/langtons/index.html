@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="p5.js"></script>
+  <script language="javascript" type="text/javascript" src="anyLangton.js"></script>
+  <script language="javascript" type="text/javascript" src="p5.dom.js"></script>
+  <link rel="stylesheet" type="text/css" href="langtonstyle.css">
+  <style> 
+  	body {padding: 0; margin: 0;} 
+  </style>
+</head>
+<body>
+	<div>
+	    <div id="div2">
+			<div id="div1">Pattern: <input type="text" value="" onchange="getInput(this.value); setup();"/></div>
+	    		<div id="div1"><input type="range" min="1" max="1000" value="50" onchange="getSpeed(this.value);"/></div>
+	    </div>
+	</div>
+    
+    <div id="div3">
+    <p><strong>Spicy Patterns:</strong><br>LLRR<br>RLLR<br>LRRRRRLLR<br>LLRRRLRLRLLR<br>RRLLLRLLLRRR<br>LLRRRLRRRRRRRR<br>RLLLLRRRLLLR</p>
+    </div>
+
+</body>
+</html>

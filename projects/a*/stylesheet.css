@@ -1,0 +1,79 @@
+body {
+	background-color: rgb(217, 217, 217);
+}
+
+button {
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#container {
+	width: 180px;
+	height: 500px;
+	margin: 10px;
+
+	padding-left: 5px;
+
+	font-family: verdana;
+}
+
+#delayText {
+	font-size: 13px;
+}
+
+#gridSize {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#run, #slow, #refresh, #userSelect, #maze, #imperfectMaze {
+	width: 170px;
+	height: 5%;
+}
+
+#parents, #costs, #heatMap {
+	width: 130px;
+	height: 25px;
+}
+
+#selections {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#currentSelect {
+	display: inline-block;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+#startingNode, #endNode, #boundaries {
+	width: 150px;
+	height: 25px;
+}
+
+#stats {
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#costError {
+	font-size: 12px;
+	color: red;
+}
+
+#specs {
+	position: absolute;
+	bottom: 10px;
+	background-color: rgb(170, 170, 170);
+	height: 15%;
+}
+
+#table {
+	width: 170px;
+	text-align: left;
+	font-size: 12px;
+	padding: 5px;
+}

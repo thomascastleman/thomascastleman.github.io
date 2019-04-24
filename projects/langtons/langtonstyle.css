@@ -1,0 +1,29 @@
+div {
+	font-size: 15px;
+	color: white;
+	padding: 3px;
+	text-align: left;
+	font-family: Lucida Sans Unicode;
+}
+
+#div1 {
+	display:inline;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#div2 {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 470px;
+}
+
+#div3 {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 120px;
+	margin:3px;
+}
+
+p {
+	font-size: 11px;
+	text-align: left;
+}

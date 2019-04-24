@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="clicker.css">
+
+		<script>
+			$(document).ready( function() {
+				$('#upgrade').hide();
+				var count = 0;
+
+				function appendRick() {
+					count++;
+					$('#container').append("<div class=\"rick smallRick\"></div>");
+					$('#count').text('You clicked Rick ' + count + ' times.');
+				}
+
+				$('#upgrade').click( function() {
+					if ($('#upgrade').is(':visible')) {
+						for (var i = 0; i < 10; i++) { // 10 extra rick clicks
+							appendRick();
+						}
+						$('#upgrade').hide();
+					}
+				});
+				$('#button').click( function() {
+					appendRick();
+					if (count % 100 == 0) { // extra rick clicks
+						$('#upgrade').show().delay(5000).fadeOut();
+					}
+					if (count > 250) {
+						window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+		<!--<embed name="nevergonnagiveyouup" loop="true" hidden="true" src="rick.mp3"></embed>-->
+		<div>
+			<div class="rick" id="button"></div>
+
+			<div id="upgrade"><p id="upgradetext">EXTRA<br>RICK<br>CLICKS</p></div>
+
+			<div id="title"><span>Click Rick</span></div>
+		</div>
+
+		<span id="count">You clicked Rick 0 times.</span>
+		<div id="container"></div>
+
+	</body>
+</html>
+
+

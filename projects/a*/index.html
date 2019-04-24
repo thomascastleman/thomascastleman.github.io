@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- LIBRARIES -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+
+  <script language="javascript" type="text/javascript" src="initialization.js"></script>
+  <script language="javascript" type="text/javascript" src="createMaze.js"></script>
+  <script language="javascript" type="text/javascript" src="astar.js"></script>
+  <script language="javascript" type="text/javascript" src="nodeClass.js"></script>
+  <script language="javascript" type="text/javascript" src="visuals.js"></script>
+  <script language="javascript" type="text/javascript" src="input.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <style> body {padding: 0; margin: 0;} </style>
+</head>
+
+<body>
+
+	<div id="container">
+		<button id="run">Run A*</button><br>
+		<button id="slow">Slow Visualization</button><br>
+		<span id="delayText">Delay (ms) </span><input id="delay" type="text" size="6" value="50"><br>
+
+		<div id="stats">
+			<span id="length">Path: </span><br>
+			<span id="explored">Nodes Explored: </span><br>
+		</div>
+
+		<button id="parents">Display Parents</button><br>
+		<button id="costs">Display F Costs</button><br>
+		<button id="heatMap">Toggle Heatmap</button><br>
+
+		<span id="costError">Nodes too small to display cost</span><br>
+
+		Size <input id="gridSize" type="text"><br>
+
+		<button id="refresh">Random Grid</button><br>
+		<button id="maze">Generate Maze</button><br>
+		<button id="imperfectMaze">Generate Imperfect Maze</button><br>
+		<button id="userSelect">User Selected Grid</button><br>
+		
+		<div id="selections">
+			<span id="currentSelect"></span>
+
+			<button id="startingNode">Select Starting Node</button><br>
+			<button id="endNode">Select End Node</button><br>
+			<button id="boundaries">Select Boundaries</button><br>
+		</div>
+
+		<!-- Displays Node specs -->
+		<div id="specs">
+			<table id="table">
+				<caption>Node Info</caption>
+				<tr>	
+					<th>Position</th>
+					<td id="pos">--</td>
+				</tr>
+				<tr>
+					<th>F Cost</th>
+					<td id="f">--</td>
+				</tr>
+				<tr>
+					<th>G Cost</th>
+					<td id="g">--</td>
+				</tr>
+				<tr>
+					<th>H Cost</th>
+					<td id="h">--</td>
+				</tr>
+
+
+			</table>
+		</div>
+
+	</div>
+</body>
+</html>

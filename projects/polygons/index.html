@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<!-- <script type="text/javascript" language="javascript" src="square.js"></script> -->
+		<script type="text/javascript" language="javascript" src="nsided.js"></script>
+		<style> 
+			body {
+				padding: 20px; margin: 0px;
+				font-size: 18px;
+				font-family: verdana;
+				background-color: rgb(45, 45, 45);
+				color: white;
+			} 
+			#stats {
+				position: fixed;
+				left: 275px;
+				top: 75%;
+				font-size: 16px;
+			}
+
+			#run, #end {
+				color: white;
+				font-size: 14px;
+				background-color: rgb(70, 70, 70);
+				border: none;
+				margin: 5px;
+				width: 100px;
+				height: 30px;
+			}
+
+			#n, #p {
+				background-color: rgb(200, 200, 200);
+				border: none;
+				font-size: 15px;
+				margin: 3px;
+				padding: 2px;
+			}
+
+			#input {
+				font-size: 15px;
+				margin: 4px;
+			}
+
+			#error {
+				color: red;
+				font-size: 14px;
+				padding: 4px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<button id="run">Run</button><br>
+		<button id="end">End</button><br>
+
+		<div id="input">
+			Number of Sides (N): <input id="n" type="text" size="6"><span id="nText">4</span><br>
+			Number of Points (P): <input id="p" type="text" size="6"><span id="pText">8</span><br>
+		</div>
+		<span id="error"></span>
+		
+
+		<div id="stats">
+			<span id="total">Total Attempts: </span><br>
+			<span id="rpolygons">Regular Polygons: </span><br>
+			<span id="nonpolygons">Not Regular Polygons: </span>
+			<br><br>
+			<span id="perc">Percentage Regular Polygons: </span><br>
+			<span id="percNot">Percentage Not Regular Polygons: </span>
+		</div><br><br>
+	</body>
+</html>

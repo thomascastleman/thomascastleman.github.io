@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio - Thomas Castleman</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="title-container">
+			<div id="bio">
+				<h1 id="main-title">My Work</h1>
+				<p><strong>Thomas Castleman</strong> is a computer science &amp; mathematics enthusiast and musician from Charlottesville, Virginia.</p>
+				<p>He enjoys working on software projects, frequenting coffee shops, creating computer graphics, thinking about math, as well as playing and studying jazz music and theory.</p>
+			</div>
+			<img id="portrait" width="300" src="media/portrait.jpg">
+		</div>
+		<ul>
+			<li>
+				<h2>Personal Website</h2>
+				<p><a href="http://tcastleman.com/" target="_blank">tcastleman.com</a> - A platform for many of my excursions in computational art and visualization, this website contains much of my early work in graphics. This includes satisfying visual constructions, cellular automata, well-known problems in computing, and visualizations of algorithms, to name a few.</p>
+			</li>
+			<li>
+				<h2>Github Profile</h2>
+				<p><a href="https://github.com/thomascastleman" target="_blank">github.com/thomascastleman</a> - Home to much of the actual code I've produced, my GitHub profile demonstrates a wide selection of the programs and software projects I've worked on over the years, both independently and collaboratively.</p>
+			</li>
+			<li>
+				<h2>Music</h2>
+			<div style="width:image width px; font-size:80%; text-align:center;">
+				<img src="media/nord.jpeg" width="50%" style="padding-bottom:0.5em;"/><br>
+				<span>The Nord alongside the harmoniser I created with friend Johnny Lindbergh (see later section)</span>
+			</div>
+				<p>I've begun to publish music that I've recorded over the years on <a href="https://soundcloud.com/thomas-castleman-506103888" target="_blank">my SoundCloud account</a>. I've been a drummer for 10 years and have cultivated an interest in jazz through playing piano, an instrument first introduced to me by my dad many years ago. Some of my main musical influences include Oscar Peterson, Bill Evans, and Brad Mehldau.</p>
+			</li>
+			<li>
+				<iframe width="700" height="396" src="https://www.youtube.com/embed/HsaM2_T5feE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<h2>Live Music Visualizer</h2>
+				<p>In November of 2018, I was involved in a 3-week long course focused on technology, music, and visual art, during which I created this piece of software, which is capable of translating input from an electronic musical instrument into a visual display of colors and shapes. The project took shape over several days and I documented my progress through video clips which I have pieced together for your viewing. In the final clip, I play Debussy's <i>Clair de Lune</i> visualized with one of my favorite configurations (shattering triangles, like glass).</p>
+			</li>
+			<li>
+				<iframe src="http://docs.google.com/gview?url=http://tcastleman.com/portfolio/media/An_Algorithm_for_the_Interpretation_of_Jazz_Harmony.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+				<h2>Harmonic Interpreter</h2>
+				<p>In an effort to create music visualizations that are sensitive to the qualities of the harmony being played, I embarked on a journey to algorithmically classify sets of notes based on their harmonic qualities.</p>
+				<p>The above paper details my approach, which involves interpreting the notes with every possible root, and then scoring each interpretation based on the presence or absence of certain intervals, the importance of which is specified in the parameters of the interpreter.</p>
+
+				<div style="width:image width px; font-size:80%; text-align:center; margin-bottom: 10px;">
+					<video width="70%" controls>
+						<source src="media/interpreter.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video><br>
+					<span>A demo of live chord interpretation using my algorithm</span>
+				</div>
+<p>I have already implemented a Processing sketch which takes MIDI input from a keyboard and displays all twelve interpretations, which can be found <a href="https://github.com/thomascastleman/midi-harmony-interpreter" target="_blank">here</a>. I plan to use this technology to design visualizations that respond to the intricacies of the harmony being played.</p>
+
+			</li>
+			<li>
+				<iframe src="http://docs.google.com/gview?url=http://tcastleman.com/portfolio/media/snowflake-fractal-paper.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+				<h2>Snowflake Fractals</h2>
+				<p>Upon hearing about the <a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank">Koch snowflake</a>, a fractal with infinite perimeter and finite area, I wanted to try to generalize the mysterious mathematical structure, drawing conclusions about the way its area converges depending on the shape of the snowflake. I wrote this paper in early 2018 to present my findings in a formalized way.</p>
+			</li>
+			<li>
+				<center><img width="90%" src="media/overflow.png"></center>
+				<h2>StabOverflow</h2>
+				<p>In August of 2018, I deployed <a href="https://github.com/thomascastleman/StabOverflow" target="_blank">StabOverflow</a>, an online Q&amp;A forum for CS students at St. Anne's-Belfield. Modeled after the widely-used Stack Overflow, StabOverflow allows students to ask questions, make comments, and respond with answers to CS-related problems. The idea was to facilitate interaction between members of the CS department across class / grade levels, and to construct, over time, a cumulative resource for all CS students to reference.</p>
+				<p>The live application can be found at <a href="http://overflow.cs.stab.org/" target="_blank">overflow.cs.stab.org</a></p>
+			</li>
+			<li>
+				<iframe width="700" height="396" src="https://www.youtube.com/embed/RUCuv3brSZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<h2>Markov Chain applied to Melodic Composition</h2>
+				<p>As part of the same technology, music, and visual art course mentioned above, I wrote another piece of software to integrate music and computation, this time using a model known as a Markov Chain to compose melodies based on live training data.</p>
+			</li>
+			<li>
+				<h2>Character Recognition</h2>
+				<p>As my friend Johnny Lindbergh completed research on the use of neural networks in machine learning for his senior capstone research project, we decided to experiment with building a simple neural network from the ground up--mostly to test our understanding of the math taking place in algorithms such as gradient descent.</p>
+
+				<p>The result of our labors is <a href="https://github.com/thomascastleman/fancy-regression" target="_blank">this network,</a> a digit classifier capable of recognizing handwritten digits with 89.1% accuracy, written entirely from scratch. This project deeply improved my understanding of both the C language and the calculus used in backpropagation. While there are certainly many improvements / optimizations that could be made to this network, it served its purpose of laying the foundations of my understanding of machine learning methods.</p>
+
+				<center><img width="90%" src="media/digitclassifier.png"></center>
+
+				<p>To visualize the network's capabilities, I wrote a p5.js sketch (shown above) to take handwritten input, pass it through the net, and display the classification output vector. This demo can be found <a href="http://tcastleman.com/ocr/" target="_blank">here</a>.</p>
+			</li>
+			<li>
+				<h2>Harmoniser</h2>
+				<p>In late 2018, I came to Johnny with a project idea quite different from anything I'd done in the past: an audio processor to harmonize live vocals with the notes specified by a MIDI controller. I took inspiration from the harmoniser built for Jacob Collier, which was created at MIT by <a href="https://ben.ai/" target="_blank">Ben Bloomberg</a>.</p>
+
+				<div style="width:image width px; font-size:80%; text-align:center;">
+					<img src="media/psolawave.jpeg" width="50%" style="padding-bottom:0.5em;"/><br>
+					<span>A vocal sample visualized with a script we used to test our peak finding algorithm</span>
+				</div>
+				
+				<p>Our harmoniser, the source for which can be found <a href="https://github.com/Castleman-Lindbergh/harmoniser" target="_blank">here</a>, interfaces with a microphone and MIDI keyboard. Analyzing the audio from the mic, it detects the pitch. Using this estimate, it makes a copy of the audio signal for each of the notes coming through the MIDI keyboard, and pitch shifts these copies (using a technique called Pitch Synchronous Overlap and Add) to the corresponding frequency of those MIDI notes. These separate signals are then all averaged back together into one, which is played back.</p>
+
+				<p>The result is a really interesting layered vocal track that matches the notes held on the MIDI keyboard. I'm working on getting a video demo of this, which I'll put up here as soon as I can.</p>
+
+			</li>
+			<li>
+				<iframe src="http://docs.google.com/gview?url=http://tcastleman.com/portfolio/media/cs2102-homework-7.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+				<h2>Discrete Math Homework</h2>
+				<p>This document is one of my favorite homework assignments I completed for CS2102, the discrete mathematics course I took at the University of Virginia in the summer of 2018. The questions themselves are not listed, but these are my written responses, and the content of the assignment covers some of my particular favorite topics from the course, including graph theory, probability, and binary relations.</p>
+			</li>
+			<li>
+				<iframe width="700" height="396" src="https://www.youtube.com/embed/DcMOz6jlMfQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<h2>Rubik's Cubes</h2>
+				<p>Solving Rubik's Cubes for speed is a hobby of mine, in addition to being something that brings me calm and peace of mind. In this clip, I solve the cube in 11.85 seconds, one of my fastest times ever. Over the years, I have participated in several cube-solving (or "cubing") competitions, competing in various events such as the 2x2 cube, 3x3 cube, 4x4 cube, and 3x3 cube one-handed.</p>
+			</li>
+			<li>
+				<center><img src="media/meditacao1.jpeg" width="45%"><img src="media/meditacao2.jpeg" width="45%"></center>
+				<h2>Transcription</h2>
+				<p>As a jazz musician, I often transcribe solos played by other musicians, usually to study their ideas and expand my own musical vocabulary. This is one of my recent transcriptions, a solo from tenor saxophonist Scott Hamilton played on one of my favorite tunes, A.C. Jobim's <i>Medita&ccedil;ao.</i></p>
+			</li>
+			<li>
+				<iframe src="http://docs.google.com/gview?url=http://tcastleman.com/portfolio/media/bebop-the-revolution.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+				<h2>Bebop Research Paper</h2>
+				<p>Inspired by my love of jazz music and culture, this research paper on the rise of bebop examines the racial, social, and economic implications of modern jazz and its function within broader jazz evolution.</p>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+	background-image: url('https://68.media.tumblr.com/0077d03c2806b7749b84968544290f65/tumblr_nm3a9vrHa41tv4cyio1_400.gif');
+	background-size: cover;
+}
+
+#upgrade {
+	display: inline-block;
+	vertical-align: top;
+	background-image: url('http://cdn.playbuzz.com/cdn/581b969b-1d6b-4812-8fcd-fa4c8a2b8ae0/e9e5215c-0642-4e18-9374-da347663b558.jpg');
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+	margin-left: 15px;
+	margin: 15px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.rick {
+	display: inline-block;
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/f8/e2/24/f8e2240ea16d2c13ba158bf4cddbc719.jpg');
+	background-size: contain;
+}
+
+.smallRick {
+	width: 50px;
+	height: 50px;
+}
+
+#button {
+	width: 290px;
+	height: 293px;
+}
+
+#container {
+	width: 100%;
+}
+
+#count {
+	display: block;
+	margin: 20px;
+	font-size: 15px;
+	font-family: Lucida Sans Unicode;
+}
+
+#title {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	font-family: Lucida Sans Unicode;
+	font-size: 100px;
+	width:50%;
+	height: 293px;
+	padding-top: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+
+#upgradetext {
+	font-size:30px;
+	font-family: Lucida Sans Unicode;
+}

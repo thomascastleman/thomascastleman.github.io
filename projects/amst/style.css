@@ -1,0 +1,44 @@
+
+.theme {
+	background-color: rgb(200, 200, 200);/*rgb(66, 134, 244);*/
+	margin: 10px;
+	padding: 10px;
+	font-size: 20px;
+	line-height: 130%;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 20px;
+}
+
+h2, h5 {
+	text-align: center;
+	margin: 5px;
+
+}
+
+a:visited, a:link {
+	color: black;
+}
+
+body {
+	background-color: rgb(100, 100, 100);
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+}
+
+.content {
+	background-color : rgb(50, 200, 125);
+	padding: 10px;
+}
+
+button {
+	color: white;
+	font-size: 14px;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+	background-color: rgb(70, 70, 70);
+	border: none;
+	margin: 5px;
+	width: 200px;
+	height: 30px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		  <script language="javascript" type="text/javascript" src="conwaysOOP.js"></script>
+		<style>
+			.div1 {
+				width: 700px;
+				padding: 10px;
+				font-family: "verdana";
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.8);
+				
+				color: rgb(190, 190, 190);
+			}
+			
+
+			input {
+				background-color: rgb(10, 10, 10);
+				color: rgb(190, 190, 190);
+				border: none;
+				height: 25px;
+			}
+			
+			#colors {
+				width: 100px;
+				height: 30px;
+			}
+			
+			body {
+				padding: 0;
+				margin: 0; 
+				font-family: verdana;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+			<div class="div1">
+				Grid Size: 
+				<input type="range" min="-70" max="-3" value="-20" onchange="getValue(this.value); setup();"/>
+				Framerate: 
+				<input type="text" value="10" onchange="getFramerate(this.value); setup();"/>
+				<input id="colors" type="button" onclick="changeColors()" value="Colors?"/>
+			</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<script type="text/javascript" language="javascript" src="graph.js"></script>
+		<script type="text/javascript" language="javascript" src="input.js"></script>
+		<style> 
+			body {
+				color: white;
+				line-height: 170%;
+				font-family: verdana;
+				font-size: 13px;
+			}
+			button {
+				width: 150px;
+				height: 30px;
+				margin-bottom: 5px;
+				border: none;
+				color: rgb(240, 240, 240);
+				background-color: rgb(40, 40, 40);
+
+				font-family: verdana;
+			}
+
+			input {
+				background-color: rgb(40, 40, 40);
+				border: none;
+				padding: 2px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<button id="visualize">Visualize</button><br>
+
+		<button id="auto">Autosize Window</button><br>
+
+		X Min: <input type="text" id="xMin" size="3"> <span id="xMintext"></span><br>
+		X Max: <input type="text" id="xMax" size="3"> <span id="xMaxtext"></span><br>
+		Y Min: <input type="text" id="yMin" size="3"> <span id="yMintext"></span><br>
+		Y Max: <input type="text" id="yMax" size="3"> <span id="yMaxtext"></span><br>
+
+		Interval Start: <input type="text" id="a" size="3"> <span id="aText"></span><br>
+		Interval End: <input type="text" id="b" size="3"> <span id="bText"></span><br>
+
+		Delay (ms): <input type="text" id="delay" size="3"><br>
+
+		Area: <span id="area"></span>
+
+	</body>
+</html>

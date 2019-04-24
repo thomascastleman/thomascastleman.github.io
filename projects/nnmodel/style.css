@@ -1,0 +1,20 @@
+
+#container {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 350px;
+	font-family: verdana;
+	font-size: 14px;
+	padding: 10px;
+}
+
+#generate, #color {
+	color: white;
+	border: none;
+	background-color: rgb(70, 70, 70);
+	font-family: verdana;
+	font-size: 12px;
+	margin-top: 10px;
+	width: 120px;
+	height: 30px;
+}

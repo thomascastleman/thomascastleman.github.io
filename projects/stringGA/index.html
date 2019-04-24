@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="stringga.js"></script>
+
+		<style>
+			body {
+				font-family:  Lucida Sans Unicode;
+				font-size: 13px;
+			}
+			div {
+				line-height: 150%;
+			}
+			#best {
+				display: block;
+				font-size: 50px;
+				margin: 15px;
+			}
+			#popSize, #mutation {
+				width: 50px;
+			}
+			#target {
+				width: 300px;
+				height: 20px;
+			}
+			#run {
+				width: 60px;
+				height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<span id="best"></span><br>
+
+		<div>
+			<!-- Target String: <input id="target" type="text"><br> --> 
+			Target String: <textarea id="target" rows="10" cols="20"></textarea><br>
+
+			Population Size: <span id="Size">800 </span><input id="popSize" type="text"><br>
+			Mutation Rate: <span id="mut">1% </span><input id="mutation" type="text"><br>
+			<span id="genCount"></span><br>
+			<span id="fitness"></span><br>
+
+			<button id="run">Run</button>
+
+			<p id="result"></p>
+		</div>
+
+	</body>
+</html>

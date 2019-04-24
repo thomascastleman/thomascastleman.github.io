@@ -1,0 +1,46 @@
+body {
+	color: white;
+	font-family: Andale Mono, Lucida Sans Unicode, verdana;
+}
+
+button {
+	margin: 2px;
+	border: none;
+	background-color: rgb(50, 50, 50);
+	color: rgb(200, 200, 200);
+	font-family: Andale Mono, Lucida Sans Unicode, verdana;
+}
+
+input {
+	background-color: rgb(50, 50, 50);
+	border: none;
+	width: 50px;
+	height: 20px;
+}
+
+#container {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	width: 190px;
+}
+
+#inputdiv {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	width: 220px;
+	line-height: 220%;
+	font-size: 13px;
+}
+
+#refresh {
+	margin-left: 30px;
+}
+
+#sortName {
+	font-size: 16px;
+	margin: 15px;
+}
+
+#sizeText {
+	margin: 10px;
+}

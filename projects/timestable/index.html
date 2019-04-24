@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<script type="text/javascript" language="javascript" src="ttable.js"></script>
+		<script type="text/javascript" language="javascript" src="input.js"></script>
+
+		<style>
+
+		#inp {
+			font-family: verdana;
+			line-height: 170%;
+			color: rgb(240, 240, 240);
+		}
+
+		button {
+			width: 120px;
+			height: 30px;
+			margin-bottom: 5px;
+			border: none;
+			color: rgb(240, 240, 240);
+			background-color: rgb(40, 40, 40);
+
+			font-family: verdana;
+		}
+
+		input {
+			background-color: rgb(40, 40, 40);
+			border: none;
+			padding: 2px;
+		}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="inp">
+			<button id="slow">Cycle Through</button><br>
+			<button id="end">End</button><br>
+			Points: <input id="pts" type="text" size="3" placeholder="200"><br>
+			Increment: <input type="text" id="inc" size="3" placeholder="0.01"><br>
+			Multiplier: <input id="mult" type="text" size="3" placeholder="2"> <span id="t"></span>
+		</div>
+	
+	</body>
+</html>

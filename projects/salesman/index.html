@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<script type="text/javascript" language="javascript" src="salesman.js"></script>
+		<style> 
+			body {padding: 0px; margin: 0px;} 
+			#length, #cities, #calc {
+				font-size: 15px;
+				font-family: Lucida Console;
+			}
+			#container {
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<span id="cities">Cities: </span><input type="text" id="city" placeholder="50" size="3"><br>
+			<span id="length">Path Distance: </span><br>
+			<span id="calc">Calculations per frame: </span><input type="text" id="calculations" placeholder="1" size="3">
+		</div>
+	</body>
+
+</html>

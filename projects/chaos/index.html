@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+		<script type="text/javascript" language="javascript" src="chaos.js"></script>
+		<script type="text/javascript" language="javascript" src="input.js"></script>
+		
+		<!--
+			3, 1/2, 0, 0
+			
+			4, 1/2, 0, 1
+			4, 1/2, 1, 1
+			4, 1/2, 2, 1
+			4, 1/2, 6, 1
+			4, 1/2, 7, 1
+			
+			5, 1/2, 0, 1
+			5, 1/2, 1, 1
+			5, 1/2, 2, 1
+			5, 3/5, 0, 0
+			5, 1/2, 9, 1
+			
+			10, 4/5, 0, 0
+		-->
+
+		<style>
+			body {
+				line-height: 170%;
+			}
+			#input {
+				color: white;
+				font-family: verdana;
+				font-size: 12px;
+			}
+
+			button {
+				width: 90px;
+				height: 30px;
+				margin-bottom: 5px;
+				border: none;
+				color: rgb(240, 240, 240);
+				background-color: rgb(80, 80, 80);
+
+				font-family: verdana;
+			}
+
+			input {
+				background-color: rgb(80, 80, 80);
+				border: none;
+				padding: 3px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div id="input">
+			<button id="run">Run</button><br>
+			<button id="end">End</button><br>
+			Points: <input id="pts" size="3"> <span id="ptText"></span><br>
+			Fraction: <input id="frac" size="3"> <span id="frText"></span><br>
+			Places Away: <input id="places" size="3"> <span id="plText"></span><br>
+			Lookbehind: <input id="behind" size="3"> <span id="bText"></span><br>
+		</div>
+
+
+	</body>
+</html>

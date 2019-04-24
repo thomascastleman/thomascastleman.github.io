@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Castleman-Lindbergh OCR</title>
+
+	<!-- external libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
+
+	<!-- our libraries -->
+	<script type="text/javascript" language="javascript" src="mainpage/preprocessing.js"></script>
+	<script type="text/javascript" language="javascript" src="mainpage/math.js"></script>
+	<script type="text/javascript" language="javascript" src="mainpage/network.js"></script>
+	<script type="text/javascript" language="javascript" src="mainpage/client.js"></script>
+
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="mainpage/main.css">
+</head>
+<body>
+	<div class="tooltip">
+		<h1>The Castleman-Lindbergh Digit Classifier</h1>
+		<span class="tooltiptext">Click and drag in the righthand box to draw a digit and press "Classify" or the enter key to run.</span>
+	</div>
+	<br>
+	<button id="classify">Classify</button><br>
+	<strong><span id="guess"></span></strong><br>
+	<div id="classifications">
+		0 <progress id="0" value="0" max="100"></progress><span id="0p"></span><br>
+		1 <progress id="1" value="0" max="100"></progress><span id="1p"></span><br>
+		2 <progress id="2" value="0" max="100"></progress><span id="2p"></span><br>
+		3 <progress id="3" value="0" max="100"></progress><span id="3p"></span><br>
+		4 <progress id="4" value="0" max="100"></progress><span id="4p"></span><br>
+		5 <progress id="5" value="0" max="100"></progress><span id="5p"></span><br>
+		6 <progress id="6" value="0" max="100"></progress><span id="6p"></span><br>
+		7 <progress id="7" value="0" max="100"></progress><span id="7p"></span><br>
+		8 <progress id="8" value="0" max="100"></progress><span id="8p"></span><br>
+		9 <progress id="9" value="0" max="100"></progress><span id="9p"></span><br>
+	</div>
+
+	<a href="./about"><div id="about">?</div></a>
+</body>
+</html>

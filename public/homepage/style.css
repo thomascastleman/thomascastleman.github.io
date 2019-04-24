@@ -1,0 +1,95 @@
+body {
+	color: white;
+	background-color: rgb(10, 10, 10);
+	font-family: 'Ubuntu', sans-serif;
+	margin: 0px;
+}
+
+
+nav {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* list of categories */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Categories */
+nav ul li {
+	display: inline-block;
+	position: relative;
+	width: 140px;
+	min-width: 100px;
+}
+
+.dropdown {
+	background-color: rgb(20, 20, 20);
+	margin: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: rgb(200, 200, 200);
+	font-size: 16px;
+}
+
+.dropdown:hover {
+	background-color: rgb(35, 35, 35);
+}
+
+/* Sub menus */
+nav li ul {
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 140px;
+	min-width: 150px;
+}
+
+.sub-menu {
+	/*background-color: rgb(45, 45, 45);*/
+	padding: 0px;
+	padding-top: 35px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	text-align: center;
+	min-width: 150px;
+}
+
+/* elements of sub menus */
+nav li li {
+	position: relative;
+	margin-bottom: 10px;
+	display: inline-block;
+	padding:0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+
+	background-color: rgb(50, 50, 50);
+}
+
+nav a {
+	color: rgb(220, 220, 220);
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color:rgb(125,125,125);
+}
+
+ul.sub-menu {
+    display:none;
+}
+
+nav {
+	background-color: rgb(15, 15, 15);
+}
+
+
+.dropdownhead {
+}
