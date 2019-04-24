@@ -1,0 +1,24 @@
+{
+  "name": "tcastleman.com",
+  "version": "1.0.0",
+  "description": "A simple web app to run my personal website, tcastleman.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomascastleman/tcastleman.com.git"
+  },
+  "author": "Thomas Castleman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomascastleman/tcastleman.com/issues"
+  },
+  "homepage": "https://github.com/thomascastleman/tcastleman.com#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mustache-express": "^1.2.8"
+  }
+}
