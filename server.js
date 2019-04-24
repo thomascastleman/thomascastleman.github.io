@@ -11,10 +11,14 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
 
-var sys = require('./settings.js');
-var routes = require('./routes.js').init(app);
+var PORT = 8080;	// server port
+
+// render main page at / directory, everything else is served statically automatically
+app.get('/', (req, res) => {
+	res.render('homepage/homepage.html');
+});
 
 // start server
-var server = app.listen(sys.PORT, function() {
+var server = app.listen(PORT, function() {
 	console.log('tcastleman.com server listening on port %d', server.address().port);
 });
