@@ -63,7 +63,7 @@ nav li ul {
 /* elements of sub menus */
 nav li li {
 	position: relative;
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 	display: inline-block;
 	padding:0px;
 	padding-top: 10px;

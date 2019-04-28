@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
 	res.render('homepage/homepage.html');
 });
 
+// redirect all unhandled GETs to /
+app.get('*', (req, res) => {
+	res.redirect('/');
+});
+
 // start server
 var server = app.listen(PORT, function() {
 	console.log('tcastleman.com server listening on port %d', server.address().port);

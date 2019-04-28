@@ -1,12 +1,8 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
-		<title>Cool Graph Thing | tcastleman.com</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
-		<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
-		<script type="text/javascript" language="javascript" src="web.js"></script>
-		<style> body {padding: 0px; margin: 0px;} </style>
+		<title>Accents | tcastleman.com</title>
 
 		<!-- favicons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
@@ -18,7 +14,22 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
+
+		<script>
+			function copy() {
+				/* Get the text field */
+				var copyText = document.getElementById("accents");
+
+				/* Select the text field */
+				copyText.select();
+
+				/* Copy the text inside the text field */
+				document.execCommand("copy");
+			}
+		</script>
 	</head>
-	<body>
+	<body>	
+	<input id="accents" type="text" value="&eacute&ecirc&egrave&agrave&ocirc&ccedil&ugrave&ucirc&acirc">
+	<button onclick="copy()">Copy text</button>
 	</body>
 </html>
