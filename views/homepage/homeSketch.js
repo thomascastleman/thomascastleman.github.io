@@ -2,6 +2,7 @@ var rainbow = false;
 var treeSize; // starting tree length of 1/4 screen height keeps tree in window. you're welcome
 var distanceFromTree;
 var minimum = 15;
+var minAngle = 0, maxAngle = 90;
 
 function setup(){
 	var canvas = createCanvas(windowWidth, windowHeight - $('nav').height());
@@ -14,7 +15,7 @@ function setup(){
 	strokeCap(ROUND);
 	strokeWeight(2);
         
-        mouseX = (width / 2) - 100;
+	mouseX = (width / 2) - 100;
 
 }
 
@@ -39,7 +40,7 @@ function draw() {
 	
 	push();
 	translate(width / 2, height);
-	rec_tree(treeSize, minimum, map(distanceFromTree, 0, width/2, 0, 180), treeSize);
+	rec_tree(treeSize, minimum, map(distanceFromTree, 0, width/2, minAngle, maxAngle), treeSize);
 	pop();
 	
 }

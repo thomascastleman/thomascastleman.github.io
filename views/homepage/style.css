@@ -24,6 +24,7 @@ nav ul li {
 	position: relative;
 	width: 140px;
 	min-width: 100px;
+	border-radius: 3px;
 }
 
 .dropdown {
@@ -36,6 +37,7 @@ nav ul li {
 }
 
 .dropdown:hover {
+	cursor: pointer;
 	background-color: rgb(35, 35, 35);
 }
 
@@ -61,17 +63,23 @@ nav li ul {
 /* elements of sub menus */
 nav li li {
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	display: inline-block;
 	padding:0px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
 
+	border-radius: 3px;
+
 	background-color: rgb(50, 50, 50);
 }
 
-nav a {
+nav li li:hover {
+	background-color: #404040;
+}
+
+nav a, nav a:visited {
 	color: rgb(220, 220, 220);
 	text-decoration: none;
 }
@@ -79,7 +87,7 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a:active {
-    color:rgb(125,125,125);
+    color: #ffffff;
 }
 
 ul.sub-menu {
@@ -88,8 +96,10 @@ ul.sub-menu {
 
 nav {
 	background-color: rgb(15, 15, 15);
-}
 
-
-.dropdownhead {
+	/* make all text non-selectable */
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */ 
 }
