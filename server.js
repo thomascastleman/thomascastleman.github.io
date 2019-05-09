@@ -25,5 +25,5 @@ app.get('*', (req, res) => {
 
 // start server
 var server = app.listen(PORT, function() {
-	console.log('tcastleman.com server listening on port %d', server.address().port);
+	console.log('castleman.space server listening on port %d', server.address().port);
 });
