@@ -1,0 +1,11 @@
+name=MIDI Visualizer Framework
+authors=Thomas Castleman
+url=https://github.com/thomascastleman/MIDI-Visualization-Framework
+categories=Video & Vision,Sound
+sentence=A library for tracking MIDI notes as they are played, designed to make it easier to create MIDI visualizations.
+paragraph=This package provides a NoteManager class for handling note object which have a channel, pitch, and velocity. Can be coupled with the Midibus library to create easily customizable visualizations of MIDI input in Processing.
+version=1
+prettyVersion=0.1.1
+lastUpdated=0
+minRevision=0
+maxRevision=0
