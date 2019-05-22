@@ -1,44 +1,51 @@
-var treeSize = window.innerHeight / 4; // starting tree length of 1/4 screen height keeps tree in window. you're welcome
-var distanceFromTree;
+var treeSize = window.innerHeight / 3.7; // starting tree length of 1/4 screen height keeps tree in window. you're welcome
+var branchRatio = 0.70;		// ratio of child branch to parent branch
+var minBranchLen = 5;		// smallest branch length, in pixels
+var angle = 20;				// angle of branch bend
 
 function draw() {
 	background(0);
 	angleMode(DEGREES);
 
-	distanceFromTree = abs((width / 2) - mouseX);
+	// scale angle based on distance from mouse X to tree trunk
+	angle = map(abs((width / 2) - mouseX), 0, width / 2, 1, 45);
 	
+	// move to horizontal center, bottom of window and draw tree
 	push();
-	translate(width / 2, height);
-	rec_tree(treeSize, 15, map(distanceFromTree, 0, width/2, 1, 45), treeSize);
+		translate(width / 2, height);
+		drawTree(treeSize);
 	pop();
-	
 }
 
-function drawLine(xPos, yPos, length) { // draws vertical line
-	line(xPos, yPos, xPos, yPos - length);
-}
+/*  draws a tree facing straight up from the current orientation
+    with branch length l */
+function drawTree(l) {
+	// base case: if we've reached the min len, stop
+	if (l > minBranchLen) {
+		// if rainbow mode activated, set random line color
+		if (rainbow == true) {
+			stroke(random(0, 255), random(0, 255), random(0, 255));
+		}
 
-function rec_tree(length, minimum, angle, original) {
-	angleMode(DEGREES);
+		// draw a branch facing straight up, of length l
+		line(0, 0, 0, -l);
 
-	transform_matrix(length, minimum, angle, original);
-	rotate(angle * -2);
-	if (length != original) {
-		transform_matrix(length, minimum, angle, original);
-	}
-}
-
-function transform_matrix(length, minimum, angle) { // draws a branch, transforms the current matrix to the end of it and rotates, then calls rec tree
-	if (rainbow == true) {
-		stroke(random(0, 255), random(0, 255), random(0, 255));
-	}
-	drawLine(0, 0, length);
-
-	if (length > minimum) {
+		// keep track of our current orientation since I'm about to do a bunch of transformations
 		push();
-		translate(0, -length);
-		rotate(angle);
-		rec_tree(length * 0.75, minimum, angle);
+			// move to the end of the branch we just drew
+			translate(0, -l);
+
+			// rotate to the left
+			rotate(-angle);
+
+			// draw a baby tree on the left side
+			drawTree(l * branchRatio);
+
+			// rotate back to center (angle) and then further to the right (angle again), so 2 * angle
+			rotate(2 * angle);
+
+			// draw another baby tree on the right side
+			drawTree(l * branchRatio);
 		pop();
 	}
-}  
+}

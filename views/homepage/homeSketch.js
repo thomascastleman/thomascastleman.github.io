@@ -1,8 +1,8 @@
 var rainbow = false;
-var treeSize; // starting tree length of 1/4 screen height keeps tree in window. you're welcome
-var distanceFromTree;
-var minimum = 15;
-var minAngle = 0, maxAngle = 90;
+var treeSize = window.innerHeight / 4; // starting tree length of 1/4 screen height keeps tree in window. you're welcome
+var branchRatio = 0.73;		// ratio of child branch to parent branch
+var minBranchLen = 10;		// smallest branch length, in pixels
+var angle = 20;				// angle of branch bend
 
 function setup(){
 	var canvas = createCanvas(windowWidth, windowHeight - $('nav').height());
@@ -14,62 +14,68 @@ function setup(){
 	stroke(random(0, 255), random(0, 255), random(0, 255));
 	strokeCap(ROUND);
 	strokeWeight(2);
-        
-	mouseX = (width / 2) - 100;
 
+	mouseX = (width / 2) - 100;
 }
 
+function draw() {
+	// redraw black background
+	background(0);
+	angleMode(DEGREES);
+
+	// scale angle based on distance from mouse X to tree trunk
+	angle = map(abs((width / 2) - mouseX), 0, width / 2, 1, 200);
+	
+	// move to horizontal center, bottom of window and draw tree
+	push();
+		translate(width / 2, height);
+		drawTree(treeSize);
+	pop();
+}
+
+/*  draws a tree facing straight up from the current orientation
+    with branch length l */
+function drawTree(l) {
+	// base case: if we've reached the min len, stop
+	if (l > minBranchLen) {
+		// if rainbow mode activated, set random line color
+		if (rainbow == true) {
+			stroke(random(0, 255), random(0, 255), random(0, 255));
+		}
+
+		// draw a branch facing straight up, of length l
+		line(0, 0, 0, -l);
+
+		// keep track of our current orientation since I'm about to do a bunch of transformations
+		push();
+			// move to the end of the branch we just drew
+			translate(0, -l);
+
+			// rotate to the left
+			rotate(-angle);
+
+			// draw a baby tree on the left side
+			drawTree(l * branchRatio);
+
+			// rotate back to center (angle) and then further to the right (angle again), so 2 * angle
+			rotate(2 * angle);
+
+			// draw another baby tree on the right side
+			drawTree(l * branchRatio);
+		pop();
+	}
+}
+
+// when space pressed, randomize color
 function keyTyped() {
 	if (key == ' ') {
 		stroke(random(0, 255), random(0, 255), random(0, 255));
 	}
 }
+
+// escape key activates rainbow mode
 function keyPressed() {
-	if (keyCode == ESCAPE && rainbow == false) {
-		rainbow = true;
-	} else {
-		rainbow = false;
+	if (keyCode == ESCAPE) {
+		rainbow = !rainbow;
 	}
 }
-
-function draw() {
-	background(0);
-	angleMode(DEGREES);
-
-	distanceFromTree = abs((width / 2) - mouseX);
-	
-	push();
-	translate(width / 2, height);
-	rec_tree(treeSize, minimum, map(distanceFromTree, 0, width/2, minAngle, maxAngle), treeSize);
-	pop();
-	
-}
-
-function drawLine(xPos, yPos, length) { // draws vertical line
-	line(xPos, yPos, xPos, yPos - length);
-}
-
-function rec_tree(length, minimum, angle, original) {
-	angleMode(DEGREES);
-
-	transform_matrix(length, minimum, angle, original);
-	rotate(angle * -2);
-	if (length != original) {
-		transform_matrix(length, minimum, angle, original);
-	}
-}
-
-function transform_matrix(length, minimum, angle) { // draws a branch, transforms the current matrix to the end of it and rotates, then calls rec tree
-	if (rainbow == true) {
-		stroke(random(0, 255), random(0, 255), random(0, 255));
-	}
-	drawLine(0, 0, length);
-
-	if (length > minimum) {
-		push();
-		translate(0, -length);
-		rotate(angle);
-		rec_tree(length * 0.75, minimum, angle);
-		pop();
-	}
-}  
