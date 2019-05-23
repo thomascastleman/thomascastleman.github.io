@@ -8,7 +8,7 @@ function draw() {
 	angleMode(DEGREES);
 
 	// scale angle based on distance from mouse X to tree trunk
-	angle = map(abs((width / 2) - mouseX), 0, width / 2, 1, 45);
+	angle = map(abs((width / 2) - mouseX), 0, width / 2, 1, 180);
 	
 	// move to horizontal center, bottom of window and draw tree
 	push();

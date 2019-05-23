@@ -5,6 +5,8 @@ function setup(){
 	var canvas = createCanvas(windowWidth, windowHeight);
 	canvas.position(0, 0);
 
+	mouseX = (2 * width) / 5;
+
 	// choose a random starting color
 	stroke(random(0, 255), random(0, 255), random(0, 255));
 	strokeCap(ROUND);
