@@ -1,6 +1,6 @@
 body {
 	color: white;
-	background-color: rgb(10, 10, 10);
+	/*background-color: rgb(10, 10, 10);*/
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0px;
 }
@@ -37,7 +37,7 @@ nav ul li {
 
 .dropdown:hover {
 	cursor: pointer;
-	background-color: rgb(35, 35, 35);
+	background-color: rgb(27, 27, 27);
 }
 
 /* Sub menus */
@@ -89,12 +89,12 @@ nav a:active {
     color: #ffffff;
 }
 
-ul.sub-menu {
+nav ul.sub-menu {
     display:none;
 }
 
 nav {
-	background-color: rgb(15, 15, 15);
+	background-color: #1a1a1a;
 
 	/* make all text non-selectable */
 	-webkit-user-select: none;  /* Chrome all / Safari all */

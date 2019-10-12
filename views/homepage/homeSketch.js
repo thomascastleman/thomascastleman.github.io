@@ -20,7 +20,7 @@ function setup(){
 
 function draw() {
 	// redraw black background
-	background(0);
+	background(38);
 	angleMode(DEGREES);
 
 	// scale angle based on distance from mouse X to tree trunk

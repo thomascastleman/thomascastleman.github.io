@@ -45,7 +45,7 @@ audio {
 
 a, a:visited {
 	/*color: #0099ff;*/
-	color: #4dff4d;
+	color: #66ffb3;
 	font-weight: bold;
 }
 
@@ -56,8 +56,13 @@ a, a:visited {
 
 h1, h2, h3 {
 	/*color: #0099ff;*/
-	color: #4dff4d;
+	color: #66ffb3;
 	user-select: none;
+}
+
+.cat-title:hover {
+	cursor: pointer;
+	color: #99ffcc;
 }
 
 body {
@@ -93,11 +98,6 @@ body {
 	padding-left: 10px;
 	margin-bottom: 10px;
 	border-radius: 5px;
-}
-
-.cat-title:hover {
-	cursor: pointer;
-	color: #80ff80;
 }
 
 .date {
