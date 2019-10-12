@@ -47,14 +47,14 @@
 						<center><a href="media/boarshead.png" target="_blank"><img width="50%" src="media/boarshead.png"></a></center>
 						<p>This process creates an approximation using colored triangles that form a mesh spanning the entire dimensions of the source image. The technique I devised to accomplish this is described below:</p>
 						<ol>
-							<li>A set of points is laid over the image, with clusters of more points in areas where more detail occurs. (This is accomplished using <a href="http://datastructur.es/sp16/materials/hw/hw5/hw5.html">dual-gradient energy</a> and placing points probabilistically based on the amount of energy at a given pixel)</li>
-							<li>A <a href="https://en.wikipedia.org/wiki/Delaunay_triangulation">Delaunay triangulation</a> is generated from this point set (using the Bowyer-Watson algorithm).</li>
+							<li>A set of points is laid over the image, with clusters of more points in areas where more detail occurs. (This is accomplished using <a href="http://datastructur.es/sp16/materials/hw/hw5/hw5.html" target="_blank">dual-gradient energy</a> and placing points probabilistically based on the amount of energy at a given pixel)</li>
+							<li>A <a href="https://en.wikipedia.org/wiki/Delaunay_triangulation" target="_blank">Delaunay triangulation</a> is generated from this point set (using the Bowyer-Watson algorithm).</li>
 							<li>The triangulation is then colored by first blurring the source image, then using the color of the pixel at each triangle's centroid to color that triangle. This has an effect similar to averaging the colors of the pixels contained within each triangle.</li>
 						</ol>
 
 						<center><a href="media/arch-poly.png" target="_blank"><img id="arch-low-poly" width="50%" src="media/arch-poly.png"></a></center>
 
-						<p>The source for this project can be found <a href="https://github.com/thomascastleman/low-poly">here.</a></p>
+						<p>The source for this project can be found <a href="https://github.com/thomascastleman/low-poly" target="_blank">here.</a></p>
 					</li>
 					<li>
 						<h3>Harmoniser<span class="date">(2018-19)</span></h3>
