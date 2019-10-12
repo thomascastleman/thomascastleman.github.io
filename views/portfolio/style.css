@@ -14,9 +14,8 @@ ul {
 }
 
 .all-categories {
-	width: 70%;
+	width: 65%;
 	margin: auto;
-	margin-bottom: 70px;
 	clear: both;
 }
 
@@ -36,6 +35,10 @@ p {
 	font-size: 15px;
 }
 
+ol {
+	font-size: 15px;
+}
+
 audio {
 	width: 70%;
 }
@@ -47,13 +50,14 @@ a, a:visited {
 }
 
 #title-container {
-	width: 65%;
+	width: 60%;
 	margin: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	/*color: #0099ff;*/
 	color: #4dff4d;
+	user-select: none;
 }
 
 body {
@@ -85,12 +89,35 @@ body {
 
 .category-list > li {
 	background-color: #595959;
-	padding: 3px;
+	padding: 15px;
 	padding-left: 10px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 }
 
 .cat-title:hover {
 	cursor: pointer;
 	color: #80ff80;
+}
+
+.date {
+	color: #a6a6a6;
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+#last-update-cont {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+#last-update {
+	color: #a6a6a6;
+	font-size: 12px;
+	margin: auto;
+}
+
+#arch-low-poly {
+	margin-top: 20px;
 }
