@@ -5,10 +5,9 @@ body {
 	margin: 0px;
 }
 
-
 nav {
 	text-align: center;
-	padding: 20px 0;
+	padding: 7px 0;
 }
 
 /* list of categories */
@@ -33,7 +32,7 @@ nav ul li {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	color: rgb(200, 200, 200);
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .dropdown:hover {
@@ -47,13 +46,13 @@ nav li ul {
 	left: 0;
 	top: 50px;
 	width: 140px;
-	min-width: 150px;
+	min-width: 100px;
 }
 
 .sub-menu {
 	/*background-color: rgb(45, 45, 45);*/
 	padding: 0px;
-	padding-top: 35px;
+	padding-top: 0px;
 	padding-bottom: 15px;
 	font-size: 14px;
 	text-align: center;
@@ -63,14 +62,14 @@ nav li ul {
 /* elements of sub menus */
 nav li li {
 	position: relative;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 	display: inline-block;
-	padding:0px;
+	padding: 0px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
 
-	border-radius: 3px;
+	border-radius: 0px;
 
 	background-color: rgb(50, 50, 50);
 }

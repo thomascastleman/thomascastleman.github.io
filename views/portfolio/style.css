@@ -11,13 +11,16 @@ body {
 
 ul {
 	list-style: none;
+}
+
+.all-categories {
 	width: 70%;
 	margin: auto;
 	margin-bottom: 70px;
 	clear: both;
 }
 
-li {
+.category {
 	background-color: #404040;
 	padding: 15px;
 	margin: 10px;
@@ -38,7 +41,8 @@ audio {
 }
 
 a, a:visited {
-	color: #0099ff;
+	/*color: #0099ff;*/
+	color: #4dff4d;
 	font-weight: bold;
 }
 
@@ -48,7 +52,8 @@ a, a:visited {
 }
 
 h1, h2 {
-	color: #0099ff;
+	/*color: #0099ff;*/
+	color: #4dff4d;
 }
 
 body {
@@ -62,6 +67,7 @@ body {
 #portrait {
 	border-radius: 5px;
 	margin: 10px;
+	margin-top: 40px;
 	float: right;
 }
 
@@ -70,5 +76,21 @@ body {
 }
 
 #bio {
-	width: 45%;
+	width: 50%;
+}
+
+.category-list {
+	overflow: hidden;
+}
+
+.category-list > li {
+	background-color: #595959;
+	padding: 3px;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+
+.cat-title:hover {
+	cursor: pointer;
+	color: #80ff80;
 }
