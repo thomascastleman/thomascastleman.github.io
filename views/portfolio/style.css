@@ -28,6 +28,10 @@ ul {
 	border-radius: 10px;
 }
 
+.category:hover {
+	background-color: #434343;
+}
+
 iframe {
 	display: block;
 	margin: auto;

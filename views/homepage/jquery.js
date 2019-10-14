@@ -28,6 +28,7 @@ $(document).ready( function() {
       // update sketch:
       setup();
   });
+  
   $(window).resize();
 
 });
