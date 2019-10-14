@@ -1,7 +1,11 @@
+
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
 body {
 	color: white;
 	/*background-color: rgb(10, 10, 10);*/
 	font-family: 'Ubuntu', sans-serif;
+	/*font-family: 'PT Sans', sans-serif;*/
 	margin: 0px;
 }
 
@@ -36,12 +40,12 @@ nav ul li {
 }
 
 .dropdown {
-	background-color: rgb(20, 20, 20);
+	background-color: #1a1a1a; /*rgb(20, 20, 20);*/
 	margin: 0px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	color: rgb(200, 200, 200);
-	font-size: 14px;
+	color: white;
+	font-size: 16px;
 }
 
 .dropdown:hover {
@@ -103,7 +107,7 @@ nav ul.sub-menu {
 }
 
 nav {
-	background-color: #1a1a1a;
+	background-color: #333333;
 
 	/* make all text non-selectable */
 	-webkit-user-select: none;  /* Chrome all / Safari all */
