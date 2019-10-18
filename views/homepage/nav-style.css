@@ -11,6 +11,7 @@ body {
 
 .greeting {
 	text-shadow: #000000 2px 0 10px;
+	user-select: none;
 }
 
 span.ddelement {
