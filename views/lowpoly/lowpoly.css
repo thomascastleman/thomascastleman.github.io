@@ -1,0 +1,32 @@
+
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
+body {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+}
+
+* {
+  user-select: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:hover {
+  color: #33adff
+}
+
+/*img {
+  display: block;
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}*/
+
+img {
+  margin: 80px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Low Poly Gallery | castleman.space</title>
+  <link href="lowpoly.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $gallery = $('#gallery');
+
+      var imgs = [
+        { poly: 'boars_head_sunset.png', orig: 'orig_boars_head_sunset.jpg' },
+        { poly: 'trane.png' },
+        { poly: 'faunce_arch.png', orig: 'orig_faunce_arch.jpg' },
+        { poly: 'dorm.png' },
+        { poly: 'blue_frog.png' },
+        { poly: 'barracks.png', orig: 'orig_barracks.JPG' },
+        { poly: 'doge.png', orig: 'orig_doge.jpg' },
+        { poly: 'out_of_the_afternoon.png' },
+        { poly: 'studio.png', orig: 'orig_studio.jpg' },
+        { poly: 'blue_light.png' },
+        { poly: 'millers.png', orig: 'orig_millers.jpg' },
+        { poly: 'BC.png', orig: 'orig_BC.jpg' },
+        { poly: 'gates.png', orig: 'orig_gates.jpg' },
+        { poly: 'paris_sunset.png', orig: 'orig_paris_sunset.jpg' },
+        { poly: 'rock.png', orig: 'orig_rock.jpg' },
+        { poly: 'paris.png', orig: 'orig_paris.jpg' },
+      ];
+
+      var addr, id;
+
+      // add each image to gallery
+      for (var i = 0; i < imgs.length; i++) {
+        addr = 'imgs/' + imgs[i].poly;
+        $gallery.append("<a href='" + addr + "'><img id='" + i + "' src='" + addr + "' width='40%' /></a><br>");
+      }
+
+      $("img").mouseover(function() {
+        // get image ID
+        var id = $(this).attr('id');
+
+        img = imgs[id];
+
+        var polyWidth = $(this).attr('width'), polyHeight = $(this).attr('height');
+
+        if (img.orig) {
+          $(this).attr('src', 'imgs/' + img.orig);
+        }
+      }).mouseout(function() {
+        var id = $(this).attr('id');
+        img = imgs[id];
+        $(this).attr('src', 'imgs/' + img.poly);
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <center>
+    <h1>Low Poly Gallery</h1>
+    <h4>Updated Nov 2019</h4>
+    <p><a href="https://github.com/thomascastleman/low-poly">Project source</a>. For more information, see <a href="http://castleman.space/portfolio">this page</a> under the 'Projects' tab</p>
+    <ul id="gallery"></ul>
+  </center>
+</body>
+</html>
