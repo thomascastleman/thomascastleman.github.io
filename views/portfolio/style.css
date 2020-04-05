@@ -58,7 +58,7 @@ audio {
 	width: 70%;
 }
 
-a, a:visited {
+a, a:visited, a * {
 	/*color: #0099ff;*/
 	color: #66ffb3;
 	font-weight: bold;
