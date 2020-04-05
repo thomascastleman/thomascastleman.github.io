@@ -24,8 +24,12 @@
 			<div id="bio">
 				<h1 id="main-title">About Me</h1>
 				<h3>Thomas Castleman</h3>
-				<p>Hi! I am currently an undergraduate at Brown University studying computer science. 
-					My interests include jazz, computational art, and linguistics.</p>
+				<p>
+					Hi! I am currently an undergraduate at Brown University studying 
+					computer science. I am interested in jazz, linguistics, ASL,
+					the design and implementation of programming languages, and
+					pedagogy.
+				</p>
 
 				<p>See my <a href="https://github.com/thomascastleman" target="_blank">GitHub 
 					profile</a> for most of my public software projects.</p>
@@ -38,7 +42,7 @@
 				<p>Almost all of the graphics on this site were created with 
 					the <a href="https://p5js.org/" target="_blank">p5.js library.</a></p>
 			</div>
-			<img id="portrait" width="270" src="media/profile_imgs/id-photo.jpg">
+			<img id="portrait" width="250" src="media/profile_imgs/id-photo.jpg">
 			<!-- <img id="portrait" width="310" src="media/whiteboard.png"> -->
 		</div>
 
@@ -50,15 +54,15 @@
 						<h3>Low Poly Images<span class="date">(2019-20)</span></h3>
 						<p>In April 2019 I started working on a script to convert images into 
 							their low poly form, as seen below:</p>
-						<center>
+
 							<a href="media/boarshead.png" target="_blank">
 								<img width="50%" src="media/boarshead.png">
 							</a>
-						</center>
+
 						<p>This process creates an approximation using colored triangles that form 
 							a mesh spanning the entire dimensions of the source image. The technique 
 							I devised to accomplish this is described below:</p>
-						<ol>
+						<ol id="low-poly-procedure">
 							<li>A set of points is laid over the image, with clusters of more points 
 								in areas where more detail occurs. (This is accomplished using 
 								<a href="http://datastructur.es/sp16/materials/hw/hw5/hw5.html" target="_blank">dual-gradient energy</a> 
@@ -70,11 +74,9 @@
 								to averaging the colors of the pixels contained within each triangle.</li>
 						</ol>
 
-						<center>
-							<a href="media/arch-poly.png" target="_blank">
-								<img id="arch-low-poly" width="50%" src="media/arch-poly.png">
-							</a>
-						</center>
+						<a href="media/arch-poly.png" target="_blank">
+							<img id="arch-low-poly" width="50%" src="media/arch-poly.png">
+						</a>
 
 						<p>The source for this project can be found 
 							<a href="https://github.com/thomascastleman/low-poly" target="_blank">here.</a></p>
@@ -92,7 +94,7 @@
 							specified by a MIDI controller. I took inspiration from the harmoniser built for Jacob 
 							Collier, which was created at MIT by <a href="https://ben.ai/" target="_blank">Ben Bloomberg</a>.</p>
 
-						<div style="width:image width px; font-size:80%; text-align:center;">
+						<div style="width:image width px; font-size:80%;">
 							<img src="media/psolawave.jpeg" width="50%" style="padding-bottom:0.5em;"/><br>
 							<span>A vocal sample visualized with a script we used to test our peak finding algorithm</span>
 						</div>
@@ -122,7 +124,7 @@
 							and then scoring each interpretation based on the presence or absence of certain intervals, the importance 
 							of which is specified in the parameters of the interpreter.</p>
 
-						<div style="width:image width px; font-size:80%; text-align:center; margin-bottom: 10px;">
+						<div style="width:image width px; font-size:80%; margin-bottom: 10px;">
 							<video width="70%" controls>
 								<source src="media/interpreter.mp4" type="video/mp4">
 								Your browser does not support the video tag.
@@ -136,13 +138,13 @@
 							intricacies of the harmony being played.</p>
 					</li>
 					<li>
-						<iframe width="700" height="396" src="https://www.youtube.com/embed/RUCuv3brSZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<iframe width="600" height="396" src="https://www.youtube.com/embed/RUCuv3brSZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						<h3>Markov Chain applied to Melodic Composition<span class="date">(2017)</span></h3>
 						<p>This is another piece of software designed to integrate music and computation, this time 
 							using a model known as a Markov Chain to compose melodies based on live training data.</p>
 					</li>
 					<li>
-						<iframe width="700" height="396" src="https://www.youtube.com/embed/HsaM2_T5feE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<iframe width="600" height="396" src="https://www.youtube.com/embed/HsaM2_T5feE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						<h3>Live Music Visualizer<span class="date">(2018)</span></h3>
 						<p>In November of 2018, I was involved in a 3-week long course focused on technology, 
 							music, and visual art, during which I created this piece of software, which is capable 
@@ -166,14 +168,14 @@
 							that could be made to this network, it served its purpose of laying the foundations of my understanding 
 							of machine learning methods.</p>
 
-						<center><img width="90%" src="media/digitclassifier.png"></center>
+						<img width="60%" src="media/digitclassifier.png">
 
 						<p>To visualize the network's capabilities, I wrote a p5.js sketch (shown above) to take 
 							handwritten input, pass it through the net, and display the classification output vector. 
 							This demo can be found <a href="http://castleman.space/ocr/" target="_blank">here</a>.</p>
 					</li>
 					<li>
-						<center><img width="90%" src="media/overflow.png"></center>
+						<img width="60%" src="media/overflow.png">
 						<h3>StabOverflow<span class="date">(2018)</span></h3>
 						<p>In August of 2018, I deployed 
 							<a href="https://github.com/thomascastleman/StabOverflow" target="_blank">StabOverflow</a>, 
@@ -192,16 +194,15 @@
 				<ul class="category-list" hidden>
 					<li>
 						<h3>SoundCloud<span class="date">(2019-present)</span></h3>
-						<div style="width:image width px; font-size:80%; text-align:center;">
+						<!-- <div style="width:image width px; font-size:80%; text-align:center;">
 							<img src="media/nord.jpeg" width="50%" style="padding-bottom:0.5em;"/><br>
 							<span>The Nord alongside the harmoniser I created with friend Johnny Lindbergh</span>
-						</div>
+						</div> -->
 						<p>I've begun to publish music that I've recorded over the years 
 							on <a href="https://soundcloud.com/thomas-castleman-506103888" target="_blank">my 
-								SoundCloud account</a>. I've been a drummer for 10 years and have cultivated an 
-								interest in jazz through playing piano, an instrument first introduced to me by 
-								my dad many years ago. Some of my main musical influences include Oscar Peterson, 
-								Bill Evans, and Brad Mehldau.</p>
+								SoundCloud account</a>. I've been playing drums for over 10 years and have 
+								cultivated an interest in jazz through playing piano. Some of my main musical 
+								influences include Oscar Peterson, Bill Evans, and Brad Mehldau.</p>
 					</li>
 				</ul>
 			</li>
@@ -259,8 +260,11 @@
 				<h2 class="cat-title">Miscellaneous</h2>
 				<ul class="category-list" hidden>
 					<li>
-						<iframe width="700" height="396" src="https://www.youtube.com/embed/DcMOz6jlMfQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<!-- <iframe width="700" height="396" src="https://www.youtube.com/embed/DcMOz6jlMfQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 						<h3>Speedcubing<span class="date">(2013-present)</span></h3>
+
+						<p><a href="https://www.youtube.com/watch?v=DcMOz6jlMfQ" target="_blank">11.85 seconds</a></p>
+
 						<p>Solving Rubik's Cubes for speed is a hobby of mine, in addition to 
 							being something that brings me calm. I happened to catch my 3x3 PR of 
 							11.85 seconds on video, as seen in this clip. Over the years, I've 

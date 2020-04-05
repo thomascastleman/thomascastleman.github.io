@@ -25,25 +25,21 @@ ul {
 }
 
 .all-categories {
-	width: 65%;
+	width: 55%;
 	margin: auto;
 	clear: both;
 }
 
 .category {
-	background-color: rgb(64, 64, 64, 0.8);
+	background-color: #272822;
 	padding: 15px;
 	margin: 10px;
 	border-radius: 10px;
 }
 
-.category:hover {
-	background-color: rgb(67, 67, 67, 0.85);
-}
-
 iframe {
 	display: block;
-	margin: auto;
+	/* margin: auto; */
 }
 
 p {
@@ -65,7 +61,7 @@ a, a:visited, a * {
 }
 
 #title-container {
-	width: 60%;
+	width: 50%;
 	margin: auto;
 }
 
@@ -107,11 +103,15 @@ h1, h2, h3 {
 }
 
 .category-list > li {
-	background-color: #595959;
+	background-color: #35372f;
 	padding: 15px;
 	padding-left: 10px;
 	margin-bottom: 35px;
 	border-radius: 5px;
+}
+
+.category-list > li p {
+	max-width: 75%;
 }
 
 .date {
@@ -134,6 +134,11 @@ h1, h2, h3 {
 
 #arch-low-poly {
 	margin-top: 20px;
+}
+
+#low-poly-procedure li {
+	margin-bottom: 10px;
+	max-width: 70%;
 }
 
 /* On screens that are 600px wide or less, the background color is olive */
