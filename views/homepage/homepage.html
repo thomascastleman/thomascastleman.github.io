@@ -2,283 +2,118 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Welcome! | castleman.space</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="homepage/nav-style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
-    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.js"></script>
-    <script type="text/javascript" language="javascript" src="homepage/jquery.js"></script>
-    <script type="text/javascript" language="javascript" src="homepage/homeSketch.js"></script>
-
-    <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <title>Thomas Castleman | castleman.space</title>
+    <link href="homepage/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <nav>
-        <ul>
-            <li class="dropdown">
-              <span class="dropdownhead">Visual Art</span>
-              <ul class="sub-menu">
-                    <a href="/bouncingball" target="_blank">
-                      <li>
-                        <span class="ddelement">Bouncing Ball</span>
-                      </li>
-                    </a>
+    <div class="container-left">
+      <h1>Thomas Castleman</h1>
+      <p>See my <a href="https://github.com/thomascastleman" target="_blank">Github profile</a> for most of my public software projects.</p>
+      
+      <div class="section">
+        <h2>Recent Projects</h2>
+        <ul class="projects-list">
+					<li>
+            <p><a href="/projects/lowpoly">Low Poly Images <span class="date">(2019-20)</span></a></p>
+            <p class="project-descrip"><i>Approximating images with triangular meshes</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/harmoniser">Harmoniser <span class="date">(2018-19)</span></a></p>
+            <p class="project-descrip"><i>Splitting a live vocal track into pitches controlled by a MIDI device</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/harmonic_interpreter">Harmonic Interpreter <span class="date">(2018)</span></a></p>
+            <p class="project-descrip"><i>Interpreting jazz chords live through a MIDI device</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/melodic_markov">Markov Chain applied to melody composition <span class="date">(2017)</span></a></p>
+            <p class="project-descrip"><i>Making melodies based on live MIDI training data</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/live_midi_visualizer">Live MIDI Visualizer <span class="date">(2018)</span></a></p>
+            <p class="project-descrip"><i>Visualizing live MIDI input with shapes/colors</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/ocr">Character Recognition <span class="date">(2018)</span></a></p>
+            <p class="project-descrip"><i>Building a neural net to identify MNIST digits</i></p>
+					</li>
+					<li>
+            <p><a href="/projects/staboverflow">StabOverflow <span class="date">(2018)</span></a></p>
+            <p class="project-descrip"><i>Helping students ask questions with a Q&A platform</i></p>
+					</li>
+				</ul>
+      </div>
 
-                    <a href="/rectree" target="_blank">
-                      <li>
-                        <span class="ddelement">Recursive Tree</span>
-                      </li>
-                    </a>
+      <div class="section">
+        <h2>Sketches</h2>
+        <p>Here's a collection of <a href="/sketches">visual sketches</a> I've 
+          created over the years. Some are visualizations of problems/algorithms,
+          others are just neat graphics.
+        </p>
+      </div>
 
-                    <a href="/web" target="_blank">
-                      <li>
-                        <span class="ddelement">Ball Web</span>
-                      </li>
-                    </a>
+      <div class="section">
+        <h2>Music</h2>
+        <p>Sometimes I post music on my <a href="https://soundcloud.com/thomas-castleman-506103888" target="_blank">SoundCloud account.</a></p>  
+      </div>
 
-                    <a href="/ballgrid" target="_blank">
-                      <li>
-                        <span class="ddelement">Ball Grid</span>
-                      </li>
-                    </a>
+      <div class="section">
+        <h2>Writing</h2>
 
-                    <a href="/nnmodel" target="_blank">
-                      <li>
-                        <span class="ddelement">Neural Network Model</span>
-                      </li>
-                    </a>
-                    
-                    <a href="/koch" target="_blank">
-                      <li>
-                        <span class="ddelement">Koch Snowflake</span>
-                      </li>
-                    </a>
-                    
-                    <a href="/otherweb" target="_blank">
-                      <li>
-                        <span class="ddelement">Web Graphic</span>
-                      </li>
-                    </a>
-
-                    <a href="/lowpoly" target="_blank">
-                      <li>
-                        <span class="ddelement">Low Poly Gallery</span>
-                      </li>
-                    </a>
-                </ul>
+        <div class="subsection">
+          <p>These essays are about music/jazz, and I wrote them for a course I took
+            in 2019 entitled 
+            <i>Hearing as Jazz Musicians Hear</i>.</p>
+    
+          <ul>
+            <li>
+              <p>
+                <a href="homepage/assets/writing/impermanence-of-musical-taste.pdf" target="_blank">
+                  The Impermanence of Musical Taste
+                </a> 
+                (2019)
+              </p>
             </li>
-
-            <li class="dropdown">
-              <span class="dropdownhead">Problems</span>
-              <ul class="sub-menu">
-                    <a href="tspSA" target="_blank">
-                      <li>
-                        <span class="ddelement">Traveling Salesman Problem (Simulated Annealing)</span>
-                      </li>
-                    </a>
-            
-                    <a href="/polygons" target="_blank">
-                      <li>
-                        <span class="ddelement">Polygon Probability Problem</span>
-                      </li>
-                    </a>
-
-                    <a href="/josephus" target="_blank">
-                      <li>
-                        <span class="ddelement">Josephus Problem</span>
-                      </li>
-                    </a>
-
-                    <a href="/nqueens" target="_blank">
-                      <li>
-                        <span class="ddelement">N Queens Problem</span>
-                      </li>
-                    </a>
-                </ul>
+            <li>
+              <p>
+                <a href="homepage/assets/writing/fidelity-and-freedom.pdf" target="_blank">
+                  Fidelity and Freedom
+                </a> 
+                (2019)
+              </p>
             </li>
-
-            <li class="dropdown">
-                <span class="dropdownhead">Pathfinding</span>
-                <ul class="sub-menu">
-                  <a href="/a*" target="_blank">
-                    <li>
-                      <span class="ddelement">A* Pathfinding</span>
-                    </li>
-                  </a>
-
-                  <a href="/maze" target="_blank">
-                    <li>
-                      <span class="ddelement">Maze Generation</span>
-                    </li>
-                  </a>
-
-                  <a href="/dfs" target="_blank">
-                    <li>
-                      <span class="ddelement">DFS Maze</span>
-                    </li>
-                  </a>
-                </ul>
+          </ul>
+        </div>
+  
+        <div class="subsection">
+          <p>This paper about snowflakes generalizes the well-known Koch snowflake.</p>
+  
+          <ul>
+            <li>
+              <p><a href="homepage/assets/writing/area-of-lr-flakes.pdf" target="_blank">The Area of <i>l-r</i> flakes</a> (2018)</p>
             </li>
-
-            <li class="dropdown">
-              <span class="dropdownhead">Games</span>
-              <ul class="sub-menu">
-                    <a href="/hanoi" target="_blank">
-                      <li>
-                        <span class="ddelement">Tower of Hanoi</span>
-                      </li>
-                    </a>
-
-                    <a href="/chaos" target="_blank">
-                      <li>
-                        <span class="ddelement">Chaos Game</span>
-                      </li>
-                    </a>
-                </ul>
+          </ul>
+    
+          <p>Also, check out <a href="/lrflakes">this interactive demo</a> of these flakes.</p>
+        </div>
+  
+        <div class="subsection">
+          <p>This research paper explores bebop and its social, racial, and economic factors.</p>
+  
+          <ul>
+            <li>
+              <p><a href="homepage/assets/writing/bebop-the-revolution.pdf" target="_blank">Bebop: the revolution</a></p>
             </li>
+          </ul>
+        </div>
+  
+      </div>
 
-            <li class="dropdown">
-              <span class="dropdownhead">Cellular Automata</span>
-              <ul class="sub-menu">
-                <a href="/conways" target="_blank">
-                  <li>
-                    <span class="ddelement">Conway's Game of Life</span>
-                  </li>
-                </a>
-
-                <a href="/langtons" target="_blank">
-                  <li>
-                    <span class="ddelement">Langton's Ant</span>
-                  </li>
-                </a>
-
-                <a href="/wolfram" target="_blank">
-                  <li>
-                    <span class="ddelement">Wolfram's Elementary CA</span>
-                  </li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <span class="dropdownhead">Visualizations</span>
-              <ul class="sub-menu">
-                <a href="/timestable" target="_blank">
-                  <li>
-                    <span class="ddelement">Multiplication Tables</span>
-                  </li>
-                </a>
-
-                <a href="/sorting" target="_blank">
-                  <li>
-                    <span class="ddelement">Sorting Visualization</span>
-                  </li>
-                </a>
-
-                <a href="/pascal" target="_blank">
-                  <li>
-                    <span class="ddelement">Pascal's Triangle</span>
-                  </li>
-                </a>
-
-                <a href="/integrals" target="_blank">
-                  <li>
-                    <span class="ddelement">Integration</span>
-                  </li>
-                </a>
-
-                <a href="/lrflakes" target="_blank">
-                  <li>
-                    <span class="ddelement">LR Flakes</span>
-                  </li>
-                </a>
-
-                <a href="/mst" target="_blank">
-                  <li>
-                    <span class="ddelement">Minimum Spanning Trees</span>
-                  </li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <span class="dropdownhead">Humor</span>
-              <ul class="sub-menu">
-                <a href="/snowmandab" target="_blank">
-                  <li>
-                    <span class="ddelement">Dabbing Snowman</span>
-                  </li>
-                </a>
-
-                <a href="/rickclicker" target="_blank">
-                  <li>
-                    <span class="ddelement">Click Rick</span>
-                  </li>
-                </a>
-
-                <a href="/cumberbatch" target="_blank">
-                  <li>
-                    <span class="ddelement">Benedict Cumberbatch</span>
-                  </li>
-                </a>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <span class="dropdownhead">Other</span>
-              <ul class="sub-menu">
-                <a href="/particles" target="_blank">
-                  <li>
-                    <span class="ddelement">Particle Sim</span>
-                  </li>
-                </a>
-
-                <a href="/stringGA" target="_blank">
-                  <li>
-                    <span class="ddelement">String Generation Genetic Algorithm</span>
-                  </li>
-                </a>
-
-                <a href="/binarypowersets" target="_blank">
-                  <li>
-                    <span class="ddelement">Power Set Generation</span>
-                  </li>
-                </a>
-                
-                <a href="/ocr" target="_blank">
-                  <li>
-                    <span class="ddelement">Handwritten Digit Recognition</span>
-                  </li>
-                </a>
-
-                <a href="http://lowpoly.castleman.space" target="_blank">
-                  <li>
-                    <span class="ddelement">Low Poly Image Processor</span>
-                  </li>
-                </a>
-              </ul>
-            </li>
-
-            <a href="/portfolio" target="_blank">
-              <li class="dropdown">
-                <span class="dropdownhead">About Me</span>
-              </li>
-            </a>
-            
-        </ul>
-    </nav>
-<!--     <center>
-      <h1 class="greeting">castleman.space</h1>
-    </center> -->
+    </div>
+    <div class="container-right">
+      <img id="portrait" width="220" src="homepage/assets/id-photo.jpg">
+      <p>I'm currently an undergraduate at Brown University studying computer 
+        science.</p>
+    </div>
   </body>
 </html>

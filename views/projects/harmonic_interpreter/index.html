@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Harmonic Interpreter | Projects | castleman.space</title>
+    <link href="/projects/projects.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-left">
+      <h1>Harmonic Interpreter <span class="date">(2018)</span></h1>
+
+      <p><a href="/homepage/assets/writing/An_Algorithm_for_the_Interpretation_of_Jazz_Harmony.pdf" target="_blank">An Algorithm for the Interpretation of Jazz Harmony</a></p>
+  
+      <p>In an effort to create music visualizations that are sensitive to the qualities of the harmony being played, 
+        I tried to algorithmically classify sets of notes based on their harmonic qualities.</p>
+      <p>The above paper details my approach, which involves interpreting the notes with every possible root, 
+        and then scoring each interpretation based on the presence or absence of certain intervals, the importance 
+        of which is specified in the parameters of the interpreter.</p>
+  
+      <div style="width:image width px; font-size:80%; margin-bottom: 10px;">
+        <video width="80%" controls>
+          <source src="/projects/assets/interpreter.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>
+        <span>A demo of live chord interpretation using my algorithm</span>
+      </div>
+      <p>I have already implemented a Processing sketch which takes MIDI input 
+        from a keyboard and displays all twelve interpretations, which can be 
+        found <a href="https://github.com/thomascastleman/midi-harmony-interpreter" target="_blank">here</a>. 
+        I plan to use this technology to design visualizations that respond to the 
+        intricacies of the harmony being played.</p>
+    </div>
+  </body>
+</html>

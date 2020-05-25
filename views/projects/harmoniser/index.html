@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Harmoniser | Projects | castleman.space</title>
+    <link href="/projects/projects.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-left">
+      <h1>Harmoniser <span class="date">(2018-19)</span></h1>
+
+      <p>In late 2018, I started thinking about an audio processor that would harmonize 
+        live vocals with the notes specified by a MIDI controller. I took 
+        inspiration from the harmoniser built for Jacob 
+        Collier, which was created at MIT by <a href="https://ben.ai/" target="_blank">Ben Bloomberg</a>.</p>
+  
+      <div style="width:image width px; font-size:80%;">
+        <img src="/projects/assets/psolawave.jpeg" width="70%" style="padding-bottom:0.5em;"/><br>
+        <span>A vocal sample visualized with a script we used to test our peak finding algorithm</span>
+      </div>
+      
+      <p>Our harmoniser, the source for which can be found 
+        <a href="https://github.com/Castleman-Lindbergh/harmoniser" target="_blank">here</a>, 
+        interfaces with a microphone and MIDI keyboard. Analyzing the audio from the mic, 
+        it detects the pitch. Using this estimate, it makes a copy of the audio signal for 
+        each of the notes coming through the MIDI keyboard, and pitch shifts these copies 
+        (using a technique called Pitch Synchronous Overlap and Add) to the corresponding 
+        frequency of those MIDI notes. These separate signals are then all averaged back 
+        together into one, which is played back.</p>
+  
+      <p>The result is a really interesting layered vocal track that matches the notes 
+        held on the MIDI keyboard. I'm working on getting a video demo of this, which 
+        I'll put up here as soon as I can.</p>
+    </div>
+  </body>
+</html>
