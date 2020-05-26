@@ -1,14 +1,14 @@
 
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
-
+/* 
 body {
   background-color: #1a1a1a;
   color: #f2f2f2;
-}
+} */
 
 * {
   user-select: none;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Times New Roman', serif;
 }
 
 ul {

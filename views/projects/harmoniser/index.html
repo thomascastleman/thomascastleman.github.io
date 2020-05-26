@@ -2,33 +2,46 @@
   <head>
     <title>Harmoniser | Projects | castleman.space</title>
     <link href="/projects/projects.css" type="text/css" rel="stylesheet">
+    <style>
+      li {
+        margin-bottom: 15px;
+      }
+    </style>
   </head>
   <body>
     <div class="container-left">
-      <h1>Harmoniser <span class="date">(2018-19)</span></h1>
+      <a href="/">Home</a>
+      <h2 class="title">Harmoniser</h2>
+      <h3 class="subtitle"><i>2018-19</i></h3>
 
-      <p>In late 2018, I started thinking about an audio processor that would harmonize 
+      <p>In late 2018, <a href="https://github.com/johnnylindbergh" target="_blank">Johnny</a> and I 
+        started working on an audio processor that would harmonize 
         live vocals with the notes specified by a MIDI controller. I took 
         inspiration from the harmoniser built for Jacob 
         Collier, which was created at MIT by <a href="https://ben.ai/" target="_blank">Ben Bloomberg</a>.</p>
-  
+
       <div style="width:image width px; font-size:80%;">
         <img src="/projects/assets/psolawave.jpeg" width="70%" style="padding-bottom:0.5em;"/><br>
         <span>A vocal sample visualized with a script we used to test our peak finding algorithm</span>
       </div>
-      
+
       <p>Our harmoniser, the source for which can be found 
         <a href="https://github.com/Castleman-Lindbergh/harmoniser" target="_blank">here</a>, 
-        interfaces with a microphone and MIDI keyboard. Analyzing the audio from the mic, 
-        it detects the pitch. Using this estimate, it makes a copy of the audio signal for 
-        each of the notes coming through the MIDI keyboard, and pitch shifts these copies 
-        (using a technique called Pitch Synchronous Overlap and Add) to the corresponding 
-        frequency of those MIDI notes. These separate signals are then all averaged back 
-        together into one, which is played back.</p>
+        interfaces with a microphone and MIDI keyboard. It works as follows:</p>
+        
+        <ol>
+          <li>The pitch (if any) of the input signal from the mic (the vocal track) is detected</li>
+          <li>Several copies of this signal are made, one for each note coming through
+            the MIDI keyboard</li>
+          <li>These signals are each pitch-shifted (using a technique called 
+            <a href="https://en.wikipedia.org/wiki/PSOLA" target="_blank">Pitch Synchronous Overlap and Add</a>) to the corresponding 
+            frequency of those MIDI notes</li>
+          <li>All the signals are then averaged back 
+            together into one, which is played back.</li>
+        </ol>
   
       <p>The result is a really interesting layered vocal track that matches the notes 
-        held on the MIDI keyboard. I'm working on getting a video demo of this, which 
-        I'll put up here as soon as I can.</p>
+        held on the MIDI keyboard.</p>
     </div>
   </body>
 </html>

@@ -14,3 +14,26 @@ html, body {
   padding-bottom: 100px;
   border-right: 1px solid #bfbfbf;
 }
+
+.title {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  margin-top: 0px;
+  color: #595959;
+  font-size: 18px;
+}
+
+/* taken from https://jpolitz.github.io/ */
+a {
+  text-decoration: none;
+  color: #0099ff;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  text-decoration: none;
+  color:#4db8ff; 
+  background-color:#f2f2f2;
+}
