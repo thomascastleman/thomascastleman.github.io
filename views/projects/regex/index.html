@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <title>Regular Expressions | Projects | castleman.space</title>
+    <link href="/projects/projects.css" type="text/css" rel="stylesheet">
+    <style>
+      ul > li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-left">
+      <a href="/">Home</a>
+      <h2 class="title">Regular Expressions</h2>
+      <h3 class="subtitle"><i>2020</i></h3>
+
+      <p>In May, I started working on a small regular expressions engine.</p>
+        
+      <p>This
+        implementation is naive in that it constructs/simulates 
+        nondeterministic finite automata (which have equivalent power to
+        regular expressions themselves) in order to perform several textual
+        functions.
+        <a href="https://en.wikipedia.org/wiki/Regular_expression#Implementations_and_running_times" 
+        target="_blank">Most modern engines</a> convert to deterministic finite automata or employ
+        backtracking, neither of which this implementation includes.</p>
+        
+      <p>My approach was largely inspired by reading Michael Sipser's <i>Introduction to the
+        Theory of Computation</i>, which I highly recommend (especially for
+        its treatment of regular/context-free languages).
+        </i></p>
+
+      <p>The source can be found 
+        <a href="https://github.com/thomascastleman/regular-expressions" target="_blank">here.</a>
+      </p>
+
+      <h3>Supported Syntax</h3>
+      <p>The full syntax supported by this engine is detailed 
+        <a href="https://github.com/thomascastleman/regular-expressions/blob/master/README.md" target="_blank">
+          here.</a></p>
+
+      <h3>Parsing</h3>
+      <p>Input strings are parsed using recursive descent, so sub-expressions 
+        are parsed recursively and are used to construct larger outer expressions.
+      </p>
+
+      <p>The following grammar was used as the basis for parsing: </p>
+
+      <pre>
+        &lt;regex&gt; := &lt;term&gt; '|' &lt;regex&gt;
+                |  &lt;term&gt;
+
+        &lt;term&gt; := { &lt;factor&gt; }
+
+        &lt;factor&gt; := &lt;base&gt; &lt;unary-op&gt;
+                  | &lt;base&gt;
+
+        &lt;unary-op&gt; := '*'
+                    | '+'
+                    | '?'
+                    | &lt;quantifier&gt;
+
+        &lt;base&gt; := &lt;char&gt;
+                | &lt;char-class&gt;
+                | '.'
+                | '\' &lt;char&gt;
+                | '(' &lt;regex&gt; ')'
+                | '[' &lt;charset-term&gt; ']'
+
+        &lt;quantifier&gt; := '{' &lt;number&gt; '}'
+                      | '{' &lt;number&gt; ',' &lt;number&gt; '}'
+                      | '{' &lt;number&gt; ',}'
+                      | '{,' &lt;number&gt; '}'
+
+        &lt;charset-term&gt; := &lt;charset-factor&gt; { &lt;charset-factor&gt; }
+
+        &lt;charset-factor&gt; := &lt;char&gt; '-' &lt;char&gt;
+                          | &lt;char&gt;
+                          | &lt;char-class&gt;
+
+        &lt;char-class&gt; := '\d'
+                      | '\w'
+                      | '\s'
+      </pre>
+
+      <p>I used the grammar from 
+        <a href="http://matt.might.net/articles/parsing-regex-with-recursive-descent/" target="_blank">
+          Matt Might's blog post
+        </a> 
+        as a starting point, and extended it to include extra syntactic support 
+        for character sets, more unary operators, etc.
+      </p>
+
+      <h3>Desugaring</h3>
+      <p>Parsing yields a tree consisting of 17 possible types of tokens. We
+        reduce this to a set of 6 core tokens: <code>Character</code>, 
+        <code>Dot</code>, <code>Empty</code>, <code>Union</code>, 
+        <code>Sequence</code>, and <code>Star</code>.
+      </p>
+
+      <p>We can express the other 11 "surface" tokens in terms of the core 6
+        as follows (illustrated informally through example):</p>
+
+
+      <table>
+        <!-- Plus -->
+        <tr>
+          <td><code>a+</code></td>
+          <td>⟶</td>
+          <td><code>aa*</code></td>
+        </tr>
+        <!-- Question -->
+        <tr>
+          <td><code>a?</code></td>
+          <td>⟶</td>
+          <td><code>(|a)</code></td>
+        </tr>
+        <!-- CharsetSequence -->
+        <tr>
+          <td><code>[abc]</code></td>
+          <td>⟶</td>
+          <td><code>a|b|c</code></td>
+        </tr>
+        <!-- Range -->
+        <tr>
+          <td><code>[a-e]</code></td>
+          <td>⟶</td>
+          <td><code>a|b|c|d|e</code></td>
+        </tr>
+        <!-- Digit -->
+        <tr>
+          <td><code>\d</code></td>
+          <td>⟶</td>
+          <td><code>[0-9]</code></td>
+          <td>⟶</td>
+          <td><code>0|1|2|...|9</code></td>
+        </tr>
+        <!-- Word -->
+        <tr>
+          <td><code>\w</code></td>
+          <td>⟶</td>
+          <td><code>[A-Za-z0-9_]</code></td>
+          <td>⟶</td>
+          <td><code>A|...|Z|a|...|z|0|...|9|_</code></td>
+        </tr>
+        <!-- Whitespace -->
+        <tr>
+          <td><code>\s</code></td>
+          <td>⟶</td>
+          <td><code>[ \t\r\n\f]</code></td>
+          <td>⟶</td>
+          <td><code>(space)|\t|\r|\n|\f</code></td>
+        </tr>
+        <!-- Exact Quantifier -->
+        <tr>
+          <td><code>a{3}</code></td>
+          <td>⟶</td>
+          <td><code>aaa</code></td>
+        </tr>
+        <!-- Range Quantifier -->
+        <tr>
+          <td><code>a{2,5}</code></td>
+          <td>⟶</td>
+          <td><code>aa(|a)(|a)(|a)</code></td>
+        </tr>
+        <!-- At Least Quantifier -->
+        <tr>
+          <td><code>a{2,}</code></td>
+          <td>⟶</td>
+          <td><code>aaa*</code></td>
+        </tr>
+        <!-- At Most Quantifier -->
+        <tr>
+          <td><code>a{,4}</code></td>
+          <td>⟶</td>
+          <td><code>(|a)(|a)(|a)(|a)</code></td>
+        </tr>
+      </table>
+
+      <p>After desugaring, simplifications are applied to the parse tree to
+        eliminate any unnecessary complexity (i.e. <code>Union(Dot, Dot)</code> 
+        becomes <code>Dot</code>, <code>Star(Empty)</code> becomes just 
+        <code>Empty</code>).
+      </p>
+
+      <h3>NFA Construction/Simulation</h3>
+      <p>At the base level, we can construct simple NFAs that recognize a single
+        character literal (left), or the empty string (right):
+      </p>
+      <image src="/projects/regex/char_nfa.png" width="300"/>
+      <image src="/projects/regex/empty_nfa.png" width="200"/>
+
+      <p>The <code>Dot</code> token is similar to the character literal case,
+      but I chose to handle this at simulation time.</p>
+
+      <p>The three regular operations (<code>Union</code>, <code>Sequence</code>,
+      and <code>Star</code>) are handled by constructing NFAs for the subcomponents,
+      and joining/modifying them in particular ways:</p>
+
+      <ul class="reg-ops">
+        <li>Union: a new start state is added, with epsilon arrows leading to 
+          the start states of both the left and right sub-NFAs.
+        </li>
+        <li>Sequence: the left sub-NFA's accept states are all given epsilon arrows
+          connecting to the right NFA's start state.</li>
+        <li>Star: a new (accepting) start state is added with an epsilon arrow
+          to the start of the base NFA, and epsilon arrows are added from all the 
+          base's accept states back to its original start.
+        </li>
+      </ul>
+
+      <p>Sipser has great diagrams illustrating these, which I recommend checking out.</p>
+
+      <p>Composing these construction tools and the base level NFAs, we get an NFA
+        that recognizes the same language as the original regular expression. We 
+        can simulate it by maintaining a set of current states, reading characters
+        from the input stream, and updating this set of states to follow transitions.
+      </p>
+
+      <h3>Example</h3>
+      <p>To see this process in action, consider the example input expression
+        <code>(a|b)c?</code>.
+      </p>
+
+      <ul>
+        <li>Input: <code>(a|b)c?</code></li>
+        <li>Parsed representation: 
+          <pre>
+  Sequence(
+    Union(
+      Character('a'),
+      Character('b')),
+    Question(
+      Character('c')))
+          </pre></li>
+          <li>Desugared representation: 
+            <pre>
+  Sequence(
+    Union(
+      Character('a'),
+      Character('b')),
+    Union(
+      Empty(),
+      Character('c')))
+            </pre></li>
+          <li>NFA representation:</li>
+
+          <image src="/projects/regex/example_nfa.png" width="525"/>
+      </ul>
+    
+    </div>
+  </body>
+</html>
