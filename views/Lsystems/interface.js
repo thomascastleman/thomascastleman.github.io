@@ -20,7 +20,7 @@ $(document).ready( function() {
 	});
 
 	// on save button, download canvas as image
-	$('#save').click(() => {
+	$('#save-Lsystem').click(() => {
 		downloadLsys();
 	});
 });
