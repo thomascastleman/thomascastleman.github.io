@@ -47,40 +47,40 @@
       <p>The following grammar was used as the basis for parsing: </p>
 
       <pre>
-        &lt;regex&gt; := &lt;term&gt; '|' &lt;regex&gt;
-                |  &lt;term&gt;
+    &lt;regex&gt; := &lt;term&gt; '|' &lt;regex&gt;
+            |  &lt;term&gt;
 
-        &lt;term&gt; := { &lt;factor&gt; }
+    &lt;term&gt; := { &lt;factor&gt; }
 
-        &lt;factor&gt; := &lt;base&gt; &lt;unary-op&gt;
-                  | &lt;base&gt;
+    &lt;factor&gt; := &lt;base&gt; &lt;unary-op&gt;
+              | &lt;base&gt;
 
-        &lt;unary-op&gt; := '*'
-                    | '+'
-                    | '?'
-                    | &lt;quantifier&gt;
+    &lt;unary-op&gt; := '*'
+                | '+'
+                | '?'
+                | &lt;quantifier&gt;
 
-        &lt;base&gt; := &lt;char&gt;
-                | &lt;char-class&gt;
-                | '.'
-                | '\' &lt;char&gt;
-                | '(' &lt;regex&gt; ')'
-                | '[' &lt;charset-term&gt; ']'
+    &lt;base&gt; := &lt;char&gt;
+            | &lt;char-class&gt;
+            | '.'
+            | '\' &lt;char&gt;
+            | '(' &lt;regex&gt; ')'
+            | '[' &lt;charset-term&gt; ']'
 
-        &lt;quantifier&gt; := '{' &lt;number&gt; '}'
-                      | '{' &lt;number&gt; ',' &lt;number&gt; '}'
-                      | '{' &lt;number&gt; ',}'
-                      | '{,' &lt;number&gt; '}'
+    &lt;quantifier&gt; := '{' &lt;number&gt; '}'
+                  | '{' &lt;number&gt; ',' &lt;number&gt; '}'
+                  | '{' &lt;number&gt; ',}'
+                  | '{,' &lt;number&gt; '}'
 
-        &lt;charset-term&gt; := &lt;charset-factor&gt; { &lt;charset-factor&gt; }
+    &lt;charset-term&gt; := &lt;charset-factor&gt; { &lt;charset-factor&gt; }
 
-        &lt;charset-factor&gt; := &lt;char&gt; '-' &lt;char&gt;
-                          | &lt;char&gt;
-                          | &lt;char-class&gt;
+    &lt;charset-factor&gt; := &lt;char&gt; '-' &lt;char&gt;
+                      | &lt;char&gt;
+                      | &lt;char-class&gt;
 
-        &lt;char-class&gt; := '\d'
-                      | '\w'
-                      | '\s'
+    &lt;char-class&gt; := '\d'
+                  | '\w'
+                  | '\s'
       </pre>
 
       <p>I used the grammar from 

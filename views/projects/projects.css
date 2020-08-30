@@ -6,6 +6,17 @@ html, body {
   padding: 0px;
 }
 
+/*  section headers */
+h3 {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+/* paragraphs directly after an h3 */
+h3 + p {
+  margin-top: 5px;
+}
+
 .container-left {
   width: 600px;
   padding-left: 100px;
@@ -21,6 +32,7 @@ html, body {
 
 .subtitle {
   margin-top: 0px;
+  margin-bottom: 15px;
   color: #595959;
   font-size: 18px;
 }
