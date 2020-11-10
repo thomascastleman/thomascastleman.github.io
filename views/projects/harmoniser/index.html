@@ -1,6 +1,8 @@
 <html>
   <head>
     <title>Harmoniser | Projects | castleman.space</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" 
+    integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link href="/projects/projects.css" type="text/css" rel="stylesheet">
     <style>
       li {
@@ -9,6 +11,14 @@
 
       audio {
         width: 100%;
+      }
+
+      #wave {
+        margin-bottom: 1px;
+      }
+
+      .captioned-image {
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -24,8 +34,8 @@
         inspiration from the harmoniser built for Jacob 
         Collier, which was created at MIT by <a href="https://ben.ai/" target="_blank">Ben Bloomberg</a>.</p>
 
-      <div style="width:image width px; font-size:80%;">
-        <img src="/projects/assets/psolawave.jpeg" width="70%" style="padding-bottom:0.5em;"/><br>
+      <div class="captioned-image" style="width:image width px; font-size:80%;">
+        <img id="wave" src="/projects/assets/psolawave.jpeg" width="70%" style="padding-bottom:0.5em;"/><br>
         <span>A vocal sample visualized with a script we used to test our peak finding algorithm</span>
       </div>
 

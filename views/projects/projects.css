@@ -4,6 +4,18 @@
 html, body {
   margin: 0px;
   padding: 0px;
+  font-size: 15px;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 24pt;
+}
+h2 {
+  font-size: 18pt;
+}
+h3 {
+  font-size: 15pt;
 }
 
 /*  section headers */
@@ -18,7 +30,7 @@ h3 + p {
 }
 
 .container-left {
-  width: 600px;
+  width: 700px;
   padding-left: 100px;
   padding-top: 40px;
   padding-right: 15px;
@@ -27,6 +39,7 @@ h3 + p {
 }
 
 .title {
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 
@@ -37,15 +50,10 @@ h3 + p {
   font-size: 18px;
 }
 
-/* taken from https://jpolitz.github.io/ */
-a {
-  text-decoration: none;
-  color: #0099ff;
-  border-bottom: 1px dotted;
+img {
+  margin-bottom: 15px;
 }
 
-a:hover {
-  text-decoration: none;
-  color:#4db8ff; 
-  background-color:#f2f2f2;
+iframe {
+  margin-bottom: 15px;
 }

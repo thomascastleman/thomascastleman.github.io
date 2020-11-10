@@ -2,16 +2,24 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-size: 15px;
+  line-height: normal;
 }
 
-* {
-  font-family: 'Times New Roman', sans-serif;
+h1 {
+  font-size: 24pt;
+}
+h2 {
+  font-size: 18pt;
+}
+h3 {
+  font-size: 15pt;
 }
 
 .container-left {
-  width: 600px;
+  width: 700px;
   padding-left: 100px;
-  padding-top: 40px;
+  padding-top: 70px;
   padding-right: 15px;
   padding-bottom: 100px;
   border-right: 1px solid #bfbfbf;
@@ -19,7 +27,8 @@ body {
 
 .container-right {
   position: absolute;
-  left: 46em;
+  /* left: 46em; */
+  left: 720px;
   top: 40px;
   width: 300px;
 }
@@ -34,12 +43,15 @@ h2 {
 }
 
 .subsection {
-  /* border-top: 1px solid #bfbfbf; */
   margin-bottom: 40px;
 }
 
 .section h2 {
   margin-top: 10px;
+}
+
+ul li p {
+  margin-bottom: 5px;
 }
 
 ul.projects-list {
@@ -50,25 +62,18 @@ ul.projects-list > li {
   margin-bottom: 15px;
 }
 
-ul.projects-list > li > p {
+.project-link {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .project-descrip {
   color: #333333;
   font-size: 15px;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }
 
-/* taken from https://jpolitz.github.io/ */
-a {
-  text-decoration: none;
-  color: #0099ff;
-  border-bottom: 1px dotted;
-}
-
-a:hover {
-  text-decoration: none;
-  color:#4db8ff; 
-  background-color:#f3f3f3;
+.img-caption {
+  margin-top: 10px;
 }
