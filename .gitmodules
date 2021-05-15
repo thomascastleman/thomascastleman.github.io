@@ -1,3 +1,6 @@
 [submodule "docs/L-Systems"]
 	path = docs/L-Systems
 	url = https://github.com/thomascastleman/L-Systems.git
+[submodule "docs/low-poly-online"]
+	path = docs/low-poly-online
+	url = https://github.com/thomascastleman/low-poly-online.git
