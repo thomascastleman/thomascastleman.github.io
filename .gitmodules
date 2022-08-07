@@ -1,6 +1,0 @@
-[submodule "docs/L-Systems"]
-	path = site/legacy/L-Systems
-	url = https://github.com/thomascastleman/L-Systems.git
-[submodule "docs/low-poly-online"]
-	path = site/legacy/low-poly-online
-	url = https://github.com/thomascastleman/low-poly-online.git
