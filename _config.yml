@@ -15,6 +15,7 @@ github_username: thomascastleman
 profile_picture: "id-photo.jpg"
 github:
   is_project_page: false
+  is_user_page: false
 
 # Build settings
 remote_theme: pages-themes/minimal@v0.2.0
