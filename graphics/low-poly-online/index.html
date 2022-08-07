@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Low Poly Image Processor</title>
+
+        <!-- FontAwesome for icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- jQuery & jQuery UI -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- p5.js graphics -->
+        <script defer src=https://p5js.org/assets/js/p5.min.js></script>
+        <script defer src=https://p5js.org/assets/js/p5.dom.min.js></script>
+
+        <!-- local .js files -->
+        <script type="text/javascript" language="javascript" src="js/main.js"></script>
+        <script type="text/javascript" language="javascript" src="js/imageupload.js"></script>
+        <script type="text/javascript" language="javascript" src="js/buffer.js"></script>
+        <script type="text/javascript" language="javascript" src="js/ui.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/lowpoly.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/DelaunayTriangulation.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/Edge.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/Triangle.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/util.js"></script>
+        <script type="text/javascript" language="javascript" src="js/poly/display.js"></script>
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div id="controls">
+            <div class="param" id="fileInput" title="Choose an image file to convert into low poly form."></div>
+
+            <div id="paramContainer">
+                <div class="param" title="The higher the detail factor, the more the detail of the original image will be preserved in the triangulation.">
+                    <p>Detail Factor | <span id="detail-factor"></span></p>
+                    <div id="detail-slider"></div>
+                </div>
+
+                <div class="param" title="The higher the kernel size, the more blurred & smooth the triangulation colors will be.">
+                    <p>Blur Kernel Size | <span id="blur-factor"></span></p>
+                    <div id="blur-slider"></div>
+                </div>
+
+                <div class="param" title="The output low poly image will be this times the size of the uploaded image.">
+                    <span>Output Scaling Factor</span>
+                    <input id="output-scale" type="number" value="1"/>
+                </div>
+
+                <!-- <div class="param">
+                    <input id="visualize" type="checkbox"/><span>Visualize Process</span>
+                </div> -->
+
+                <div id="generate-container" class="param" title="Generate a new low poly image.">
+                    <button class="btn" id="generate" onclick="updateLowPoly();"><i class="far fa-image icon"></i>Generate</button>
+                </div>
+
+                <div id="loading">
+                    <center>
+                    <img src="assets/loading.gif" width="100px"/><br>
+                    <span>Loading</span>
+                    </center>
+                </div>
+
+                <div id="save-container" class="param" title="Download the low poly image to your computer.">
+                    <button class="btn" id="save" onclick="saveLowPoly();"><i class="fas fa-file-download icon"></i>Save</button>
+                </div>
+
+                <div id="console" hidden><br></div>
+            </div>
+
+            <div id="toggle">Toggle Parameters</div>
+        </div>
+    </body>
+</html>

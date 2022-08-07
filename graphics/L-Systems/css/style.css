@@ -1,0 +1,158 @@
+@import 'https://fonts.googleapis.com/css?family=PT+Sans';
+
+* {
+	font-family: 'PT Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 250px;
+}
+
+div {
+	font-size: 15px;
+	padding: 3px;
+	text-align: left;
+	font-family: Lucida Sans Unicode;
+}
+
+h5 {
+	margin: 0;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+table {
+	width: 70%;
+	margin: auto;
+
+}
+
+table tr {
+	text-align: center;
+}
+
+table td {
+	padding: 0px !important;
+}
+
+#left {
+	width: 320px;
+	float:left;
+}
+
+#right {
+	margin-left: 330px;
+
+}
+
+#settings {
+	background-color: rgba(67, 69, 59, 0.80);
+	color: #F8F8F2;
+	width: 570px;
+	margin:3px;
+	user-select: none;
+	padding: 6px;
+	border-radius: 5px;
+	clear: both;
+	overflow: auto;
+}
+
+#settings p {
+	margin: 0;
+}
+
+#controls-wrapper {
+	clear: both;
+	overflow: auto;
+}
+
+#axiom, #ignore, textarea, #iterations {
+	background-color: #272822;
+	color: #F8F8F2;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 13px;
+}
+
+#axiom, #ignore {
+	margin-bottom: 5px;
+	padding: 3px;
+	border: none;
+	border-radius: 3px;
+}
+
+#axiom { width: 230px; }
+#ignore { width: 176px; }
+
+#library {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#library p {
+	margin: 0;
+}
+
+#library p:hover {
+	cursor: pointer;
+	color: #4dffff;
+}
+
+#library h4 {
+	margin: 0;
+}
+
+#iterations {
+	width: 45px;
+	border: none;
+	padding: 3px;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+#toggle-ui {
+	clear: both;
+	width: 90%;
+}
+
+#toggle-ui:hover {
+	cursor: pointer;
+}
+
+.btn {
+	font-size: 13px;
+	display: inline-block;
+	background-color: rgba(0,0,0, 0.4);
+	width: 120px;
+	height: 30px;
+	color: white;
+	padding: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.55);
+}
+
+#error-message {
+	color: #ff9999;
+	/* text-shadow: 0 0 14px #ffffff; */
+}
+
+#err-wrapper {
+	background-color: rgba(0,0,0, 0.4);
+}
+
+h4 {
+	font-size: 17px;
+}
+
+a {
+	color: #1affff;
+}

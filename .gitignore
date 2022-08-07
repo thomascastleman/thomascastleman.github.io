@@ -1,5 +1,10 @@
-# Credentials file
-/credentials.js
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
 
 package-lock.json
 

@@ -9,7 +9,7 @@
 title: castleman.space
 description: >- # this means to ignore newlines until "baseurl:"
   Thomas Castleman's website.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://castleman.space"
 github_username: thomascastleman
 profile_picture: "id-photo.jpg"
