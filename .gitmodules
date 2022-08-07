@@ -1,0 +1,6 @@
+[submodule "site/graphics/L-Systems"]
+	path = site/graphics/L-Systems
+	url = https://github.com/thomascastleman/L-Systems.git
+[submodule "site/graphics/low-poly-online"]
+	path = site/graphics/low-poly-online
+	url = https://github.com/thomascastleman/low-poly-online.git
