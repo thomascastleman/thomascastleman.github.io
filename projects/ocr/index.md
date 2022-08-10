@@ -22,4 +22,4 @@ of machine learning methods.</p>
 
 <p>I also wrote a p5.js sketch (shown above) to take 
 handwritten input, pass it through the net, and display the classification output vector. 
-This demo can be found <a href="/ocr" target="_blank">here</a>.</p>
+This demo can be found <a href="/graphics/ocr" target="_blank">here</a>.</p>
