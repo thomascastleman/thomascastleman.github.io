@@ -7,6 +7,8 @@ See my [Github profile](https://github.com/thomascastleman) for most of my publi
 
 ## Recent Projects
 
+- [Borrow Newt (2023)](projects/borrow_newt): Model of Rust borrow checking rules
+
 - [TCP/IP (2022)](projects/tcpip): TCP over IP over UDP
 
 - [Stew 3000 (2021)](projects/stew3000): An 8-bit breadboard computer
