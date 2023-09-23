@@ -7,6 +7,8 @@ See my [Github profile](https://github.com/thomascastleman) for most of my publi
 
 ## Recent Projects
 
+- [Rustracer (2023)](projects/rustracer): 3D rendering in Rust
+
 - [Borrow Newt (2023)](projects/borrow_newt): Model of Rust borrow checking rules
 
 - [TCP/IP (2022)](projects/tcpip): TCP over IP over UDP
