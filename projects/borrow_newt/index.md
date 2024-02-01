@@ -60,7 +60,7 @@ The model is capable of generating some interesting cases, some of which are hig
 
 ### Slides
 
-We gave a presentation on this project, and the [slides can be found here](https://docs.google.com/presentation/d/1PJ3sMWu1CXEFb6iA1bm-1LEnbKvAeI35beMIlZ6cn_w/edit?usp=sharing).
+We gave a presentation on this project, and the [slides can be found here](https://docs.google.com/presentation/d/1Sz-_Ias1T34SvCHiLJUqqhaeBTJoHgM6/edit?usp=sharing&ouid=116702307498430542249&rtpof=true&sd=true).
 
 ### Source
 
